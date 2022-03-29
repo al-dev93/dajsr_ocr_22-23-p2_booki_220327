@@ -3,3 +3,87 @@
 *{
     box-sizing: border-box;
 }
+.plain-text{
+    margin: 0;
+    font-size: 14px;
+    color: black;
+}
+body{
+    padding: 0 40px;
+    font-family: 'Raleway', sans-serif;
+    color: black;
+}
+/* définition du header */
+#top-header{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2px;
+}
+#logo{
+    width: 100px;
+    padding-top: 20px;
+}
+#menu{
+    display: flex;
+}
+#menu ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.menu-item{
+    list-style: none;
+    flex: 1;
+    display: flex;
+    justify-content: stretch;
+}
+
+.menu-item a{
+    text-decoration: none;
+    padding-top: 30px;
+    margin: 0 30px;
+}
+.menu-item a:hover{
+    color: #0064fa;
+}
+h1{
+    font-size: 20px;
+    font-weight: 800;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+@media screen and (min-width: 768px){
+    .menu-item:hover{
+        border-top: solid 2px #0064fa;
+    }
+}
+@media screen and (max-width: 768px) {
+    body{
+        padding:0;
+    }
+    #top-header{
+        flex-direction: column;
+        align-items: center;
+    }
+    #menu{
+        align-self: stretch;
+    }
+    #menu ul{
+        flex: 1;
+        justify-content: stretch;
+    }
+    .menu-item{
+        border-bottom: solid 2px #F2F2F2;
+    }
+    .menu-item:hover{
+        border-bottom: solid 2px #0064fa;
+    }
+    .menu-item a{
+        padding-bottom: 15px;
+        margin: 0 auto;
+    }
+    #title{
+        padding-left: 10px;
+    }
+}
+/* fin du header */
