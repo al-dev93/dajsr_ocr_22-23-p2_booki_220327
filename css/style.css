@@ -17,11 +17,11 @@ body{
 #top-header{
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    padding-top: 5px;
+    padding-top: 2px;
 }
 #logo{
     width: 100px;
+    padding-top: 20px;
 }
 #menu{
     display: flex;
@@ -36,11 +36,11 @@ body{
     flex: 1;
     display: flex;
     justify-content: stretch;
-    padding: 15px 0;
 }
 
 .menu-item a{
     text-decoration: none;
+    padding-top: 30px;
     margin: 0 30px;
 }
 .menu-item a:hover{
@@ -79,8 +79,11 @@ h1{
         border-bottom: solid 2px #0064fa;
     }
     .menu-item a{
+        padding-bottom: 15px;
         margin: 0 auto;
     }
-    
+    #title{
+        padding-left: 10px;
+    }
 }
 /* fin du header */
