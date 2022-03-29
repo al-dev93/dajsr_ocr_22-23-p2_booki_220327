@@ -8,12 +8,16 @@
     font-size: 14px;
     color: black;
 }
+
 body{
     padding: 0 40px;
     font-family: 'Raleway', sans-serif;
     color: black;
 }
 /* définition du header */
+header{
+    margin-bottom: 20px;
+}
 #top-header{
     display: flex;
     justify-content: space-between;
@@ -37,7 +41,6 @@ body{
     display: flex;
     justify-content: stretch;
 }
-
 .menu-item a{
     text-decoration: none;
     padding-top: 30px;
@@ -47,7 +50,7 @@ body{
     color: #0064fa;
 }
 h1{
-    font-size: 20px;
+    font-size: 21px;
     font-weight: 800;
     margin-top: 30px;
     margin-bottom: 10px;
@@ -86,4 +89,43 @@ h1{
         padding-left: 10px;
     }
 }
-/* fin du header */
+/* installation de la barre de recherche */
+form{
+    width: 410px;
+    height: 50px;
+    position: relative;
+    border: solid 2px #F2F2F2;
+    border-radius: 10px;
+}
+label{
+    width: 50px;
+    height: 100%;
+    position: absolute;
+    border-radius: 10px 0 0 10px;
+    background-color: #F2F2F2;
+}
+label span{
+    padding-top: 17px;
+    padding-left: 19px;
+}
+#location{
+    width: 230px;
+    height: 100%;
+    position: absolute;
+    left: 50px;
+    border: none;
+    padding-left: 10px;
+    font-weight: bold;
+    color: black;
+}
+#search-button{
+    width: 130px;
+    height: 100%;
+    position: absolute;
+    left: 280px;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    background-color: #0064fa;
+    color: #fff;
+    font-weight: 700;
+}
