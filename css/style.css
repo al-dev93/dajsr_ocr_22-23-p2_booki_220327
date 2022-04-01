@@ -1,4 +1,4 @@
-/** propriétés globales */
+/********** propriétés globales ********************/
 *{
     box-sizing: border-box;
 }
@@ -17,7 +17,7 @@ body{
     color: black;
 }
 
-/** définition du header */
+/********** création du header ********************/
 header{
     margin-bottom: 25px;
     padding: 0 80px;
@@ -25,12 +25,12 @@ header{
 #top-header{
     display: flex;
     justify-content: space-between;
-    /* padding-top: 2px; */
 }
 #logo{
     width: 120px;
     padding-top: 60px;
 }
+    /*création du menu **********/
 #menu{
     display: flex;
 }
@@ -53,6 +53,7 @@ header{
 .menu-item a:hover{
     color: #0064fa;
 }
+    /* format du titre **********/
 #title{
     margin-top: 50px;
 }
@@ -62,19 +63,18 @@ h1{
     font-weight: 900;
 }
 
-/** corps de page, zone principale */
+/********** corps de page, zone principale ********************/
 main{
     padding: 0 80px;
 }
-
-/** installation de la barre de recherche */
+    /* installation de la barre de recherche **********/
 form{
-    width: 555px;
+    max-width: 555px;
     height: 70px;
     position: relative;
     border: solid 2px #F2F2F2;
     border-radius: 24px;
-    margin-bottom: 100px;
+    margin-bottom: 38px;
 }
 label{
     width: 65px;
@@ -92,7 +92,6 @@ label span{
     text-align: center;
 }
 #location{
-    width: 310px;
     height: 100%;
     position: absolute;
     left: 65px;
@@ -119,68 +118,96 @@ label span{
     display: none;
 }
 
-/** mise en place des filtres */
+    /* mise en place des filtres **********/
 #wrap-filters{
     display: flex;
     align-items: baseline;
+    margin-bottom: 40px;
 }
 #wrap-filters > p{
-    margin-right: 20px;
+    margin: 0 35px 0 0;
+    padding-left: 10px;
+    margin-bottom: 12px;
 }
 #wrap-filters-buttons{
-    /* width: 100%; */
     display: flex;
     flex-wrap: wrap;
+}
+.button-filter{
+    display: flex;
+    margin: 0 28px 10px 0;
+}
+.wrap-icon-filter{
+    max-width: 34px;
+    margin: 0;
 }
 .icon-filter{
     width: 68px;
     height: 68px;
     font-size: 26px;
     padding-top: 21px;
-    margin: 0 10px 0 0;
     border-radius: 50%;
     color: #0064fa;
-    background-color: rgba(0, 100, 250, 0.08);
+    background-color: #deebff;
+    opacity: 0.99;
     text-align: center;
 }
 .label-filter{
-    width: fit-content;
-    max-height: 68px;
-    padding-right: 25px;
-    margin: 0 20px 20px 0;
-    border: solid 2.5px #e8e8e8;
-    border-radius : 34px;
+    height: 68px;
+    margin: 0;
+    padding: 18px 25px 0 50px;
+    border-top: solid 3px #d9d9d9;
+    border-right: solid 3px #d9d9d9;
+    border-bottom: solid 3px #d9d9d9;
+    border-radius : 0 34px 34px 0;
     font-size: 25px;
     font-weight: bold;
 }
+#info-free{
+    display: flex;
+    align-items: baseline;
+}
 .icon-info{
-    width: 32px;
-    height: 32px;
+    width: 34px;
+    height: 34px;
     font-size: 16px;
-    padding-top: 6.25px;
+    padding-top: 7px;
     margin-right: 10px;
     border-radius: 50%;
     color: #0064fa;
     border: solid 2px #F2F2F2;
     text-align: center;
+    flex-shrink: 0;
 }
-/** gestion adaptative des écrans */
-    /* écran de tablette */
+/********** gestion adaptative des écrans ********************/
+
+    /** pour écran de tablette **********/
 @media screen and (min-width: 768px){
     .menu-item:hover{
         border-top: solid 4px #0064fa;
     }
 }
-    /* écran de smartphone */
+
+    /** pour écran de smartphone **********/
 @media screen and (max-width: 768px) {
-    /* header */
+/* propriétés globales **********/
+    .plain-text{
+        font-size: 18px;
+    }
+/* header **********/
     header{
         padding:0;
+        margin-bottom: 42px;
     }
     #top-header{
         flex-direction: column;
         align-items: center;
     }
+    #logo{
+        width: 100px;
+        padding-top: 30px;
+    }
+    /* adaptation du menu **********/
     #menu{
         align-self: stretch;
     }
@@ -192,42 +219,77 @@ label span{
         border-bottom: solid 2px #F2F2F2;
     }
     .menu-item:hover{
-        border-bottom: solid 2px #0064fa;
+        border-bottom: solid 3px #0064fa;
     }
     .menu-item a{
-        padding-bottom: 15px;
+        padding: 30px 0 15px 0;
         margin: 0 auto;
     }
+    /* adaptation du titre **********/
     #title{
         width: 85%;
-        margin-left: 20px;
+        margin: 40px 0 0 26px;
     }
-
+    h1{
+        font-size: 24px;
+        font-weight: 700;
+    }
+/* corps de page, zone pincipale **********/
     main{
-        padding: 0 20px;
+        padding: 0 25px;
     }
-    /* barre de recherche */
+    /* barre de recherche ***********/
     form{
-        max-width: 100%;
+        width: 100%;
+        height: 56px;
+    }
+    #location{
+        font-size: 20px;
+    }
+    label{
+        height: 56px;
+    }
+    label span{
+        padding-top: 18px;
+        font-size: 20px;
     }
     #large-search-button{
         display: none;
     }
     #small-search-button{
-        width: 50px;
-        height: 50px;
+        width: 56px;
+        height: 56px;
         display: block;
         position: absolute;
         top: -2px;
         right: -2px;
         border: none;
-        border-radius: 10px;
+        border-radius: 18px;
         background-color: #0064fa;
         color: #fff;
-        box-shadow: none;
+        font-size: 20px;
     }
-    /* filtres */
+    /* adaptation des filtres */
     #wrap-filters{
         flex-direction: column;
+    }
+    .button-filter{
+        margin-right: 12px;
+    }
+    .wrap-icon-filter{
+        max-width: 30px;
+    }
+    .icon-filter{
+        width: 60px;
+        height: 60px;
+        font-size: 18px;
+        padding-top: 21px;
+        border-radius: 50%;
+    }
+    .label-filter{
+        height: 60px;
+        padding: 18px 18px 0 44px;
+        border-radius : 0 30px 30px 0;
+        font-size: 18px;
     }
 }
