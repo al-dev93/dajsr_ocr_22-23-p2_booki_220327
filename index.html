@@ -17,6 +17,7 @@
     <header>
         <div id="top-header">
             <img id="logo" src="./images/logo/Booki@3x.png" alt="logo booki">
+            <!-- menu de la page -->
             <nav id="menu">
                 <ul>
                     <li class="menu-item"><a class="plain-text" href="#">Hébergements</a></li>
@@ -24,12 +25,15 @@
                 </ul>
             </nav>
         </div>
+        <!-- cadre du titre-->
         <div id="title">
             <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
             <p class="plain-text">En plein centre ville ou en pleine nature</p>
         </div>
     </header>
+    <!-- partie centrale de la page -->
     <main>
+        <!-- barre de recherche -->
         <form method="post" action="#">
             <label for="location"><span class="fas fa-map-marker-alt"></span></label>
             <input type="search" id="location" name="location" placeholder="Marseille, France"/>
@@ -38,6 +42,20 @@
                 <i class="fas fa-search"></i>
             </button>
         </form>
+        <!-- section de filtrage -->
+        <section id="filters">
+            <div id="wrap-filters">
+                <p class="bold-text">Filtres</p>
+                <div id="wrap-filters-buttons">
+                    <p class="label-filter"><i class="fas fa-money-bill-wave icon-filter"></i>Économique</p>
+                    <p class="label-filter"><i class="fas fa-child icon-filter"></i>Familial</p>
+                    <p class="label-filter"><i class="fas fa-heart icon-filter"></i>Romantique</p>
+                    <p class="label-filter"><i class="fas fa-dog icon-filter"></i>Animaux autorisés</p>
+                </div>
+            </div>
+            <i class="fas fa-info icon-info"></i>
+            <span class="plain-text"> Plus de 500 logements sont dans cette ville</span>
+        </section>
     </main>
     <footer>
 

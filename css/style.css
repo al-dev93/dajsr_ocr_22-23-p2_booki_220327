@@ -1,11 +1,15 @@
-/*   font-family: 'Raleway', sans-serif; */
-
+/** propriétés globales */
 *{
     box-sizing: border-box;
 }
 .plain-text{
     margin: 0;
-    font-size: 15px;
+    font-size: 20px;
+    color: black;
+}
+.bold-text{
+    font-size: 24px;
+    font-weight: bold;
     color: black;
 }
 body{
@@ -15,17 +19,17 @@ body{
 
 /** définition du header */
 header{
-    margin-bottom: 20px;
-    padding: 0 50px;
+    margin-bottom: 25px;
+    padding: 0 80px;
 }
 #top-header{
     display: flex;
     justify-content: space-between;
-    padding-top: 2px;
+    /* padding-top: 2px; */
 }
 #logo{
-    width: 100px;
-    padding-top: 20px;
+    width: 120px;
+    padding-top: 60px;
 }
 #menu{
     display: flex;
@@ -43,76 +47,128 @@ header{
 }
 .menu-item a{
     text-decoration: none;
-    padding-top: 30px;
-    margin: 0 30px;
+    padding-top: 65px;
+    margin: 0 38px;
 }
 .menu-item a:hover{
     color: #0064fa;
 }
+#title{
+    margin-top: 50px;
+}
 h1{
-    font-size: 21px;
-    font-weight: 800;
-    margin-top: 30px;
-    margin-bottom: 10px;
+    margin: 0 0 15px 0;
+    font-size: 28px;
+    font-weight: 900;
 }
 
 /** corps de page, zone principale */
 main{
-    padding: 0 50px;
+    padding: 0 80px;
 }
 
 /** installation de la barre de recherche */
 form{
-    width: 410px;
-    height: 50px;
+    width: 555px;
+    height: 70px;
     position: relative;
     border: solid 2px #F2F2F2;
-    border-radius: 10px;
+    border-radius: 24px;
+    margin-bottom: 100px;
 }
 label{
-    width: 50px;
-    height: 50px;
+    width: 65px;
+    height: 70px;
     position: absolute;
     top: -2px;
     left: -2px;
-    border-radius: 10px 0 0 10px;
+    border-radius: 24px 0 0 24px;
     background-color: #F2F2F2;
 }
 label span{
-    padding-top: 17px;
-    padding-left: 19px;
+    width: 100%;
+    padding-top: 24px;
+    font-size: 22px;
+    text-align: center;
 }
 #location{
-    width: 230px;
+    width: 310px;
     height: 100%;
     position: absolute;
-    left: 50px;
+    left: 65px;
     border: none;
-    padding-left: 10px;
+    padding-left: 15px;
+    font-size: 24px;
     font-weight: bold;
     color: black;
 }
 #large-search-button{
-    width: 130px;
-    height: 50px;
+    width: 180px;
+    height: 70px;
     position: absolute;
     top: -2px;
     right: -2px;
     border: none;
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 24px 24px 0;
     background-color: #0064fa;
-    color: #fff;
+    font-size: 24px;
     font-weight: 700;
+    color: #fff;
 }
 #small-search-button{
     display: none;
 }
 
+/** mise en place des filtres */
+#wrap-filters{
+    display: flex;
+    align-items: baseline;
+}
+#wrap-filters > p{
+    margin-right: 20px;
+}
+#wrap-filters-buttons{
+    /* width: 100%; */
+    display: flex;
+    flex-wrap: wrap;
+}
+.icon-filter{
+    width: 68px;
+    height: 68px;
+    font-size: 26px;
+    padding-top: 21px;
+    margin: 0 10px 0 0;
+    border-radius: 50%;
+    color: #0064fa;
+    background-color: rgba(0, 100, 250, 0.08);
+    text-align: center;
+}
+.label-filter{
+    width: fit-content;
+    max-height: 68px;
+    padding-right: 25px;
+    margin: 0 20px 20px 0;
+    border: solid 2.5px #e8e8e8;
+    border-radius : 34px;
+    font-size: 25px;
+    font-weight: bold;
+}
+.icon-info{
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+    padding-top: 6.25px;
+    margin-right: 10px;
+    border-radius: 50%;
+    color: #0064fa;
+    border: solid 2px #F2F2F2;
+    text-align: center;
+}
 /** gestion adaptative des écrans */
     /* écran de tablette */
 @media screen and (min-width: 768px){
     .menu-item:hover{
-        border-top: solid 2px #0064fa;
+        border-top: solid 4px #0064fa;
     }
 }
     /* écran de smartphone */
@@ -169,5 +225,9 @@ label span{
         background-color: #0064fa;
         color: #fff;
         box-shadow: none;
+    }
+    /* filtres */
+    #wrap-filters{
+        flex-direction: column;
     }
 }
