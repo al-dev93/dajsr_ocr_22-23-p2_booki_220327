@@ -31,14 +31,14 @@
             <p class="plain-text">En plein centre ville ou en pleine nature</p>
         </div>
     </header>
-    <!-- partie centrale de la page -->
+    <!--* partie centrale de la page -->
     <main>
         <!-- barre de recherche -->
         <form method="post" action="#">
             <label for="location"><span class="fas fa-map-marker-alt"></span></label>
             <input type="search" id="location" name="location" placeholder="Marseille, France"/>
-            <input id="large-search-button" type="submit" value="Rechercher" />
-            <button id="small-search-button" type="submit">
+            <input id="large-searchButton" type="submit" value="Rechercher" />
+            <button id="small-searchButton" type="submit">
                 <i class="fas fa-search"></i>
             </button>
         </form>
@@ -46,21 +46,21 @@
         <section>
             <div id="wrap-filters">
                 <p class="bold-text">Filtres</p>
-                <div id="wrap-filters-buttons">
+                <div id="wrap-filtersButtons">
                     <div class="button-filter">
-                        <p class="wrap-icon-filter"><i class="fas fa-money-bill-wave icon-filter"></i></p>
+                        <p class="wrap-iconFilter"><i class="fas fa-money-bill-wave icon-filter"></i></p>
                         <p class="label-filter">Économique</p>
                     </div>
                     <div class="button-filter">
-                        <p class="wrap-icon-filter"><i class="fas fa-child icon-filter"></i></p>
+                        <p class="wrap-iconFilter"><i class="fas fa-child icon-filter"></i></p>
                         <p class="label-filter">Familial</p>
                     </div>
                     <div class="button-filter">
-                        <p class="wrap-icon-filter"><i class="fas fa-heart icon-filter"></i></p>
+                        <p class="wrap-iconFilter"><i class="fas fa-heart icon-filter"></i></p>
                         <p class="label-filter">Romantique</p>
                     </div>
                     <div class="button-filter">
-                        <p class="wrap-icon-filter"><i class="fas fa-dog icon-filter"></i></p>
+                        <p class="wrap-iconFilter"><i class="fas fa-dog icon-filter"></i></p>
                         <p class="label-filter">Animaux autorisés</p>
                     </div>
                 </div>
@@ -69,6 +69,25 @@
                 <i class="fas fa-info icon-info"></i>
                 <p class="plain-text"> Plus de 500 logements sont disponibles dans cette ville</p>
             </div>
+        </section>
+        <section id="accommodation">
+            <div class="card">
+                <a class="card-link" href="#">
+                    <img class="card-image" src="./images/accommodation/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="image d'hébergement">
+                    <div class="card-info">
+                        <h3 class="card-title">Auberge La Cannebière</h3>
+                        <p class="plain-text card-nightInfo">Nuit à partir de <em>25€</em></p>
+                        <div class="card-score">
+                            <i class="fas fa-star full-star"></i>
+                            <i class="fas fa-star full-star"></i>
+                            <i class="fas fa-star full-star"></i>
+                            <i class="fas fa-star full-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
         </section>
     </main>
     <footer>

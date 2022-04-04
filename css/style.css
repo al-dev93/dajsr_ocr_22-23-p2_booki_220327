@@ -5,16 +5,16 @@
 .plain-text{
     margin: 0;
     font-size: 20px;
-    color: black;
+    color: #000;
 }
 .bold-text{
     font-size: 24px;
     font-weight: bold;
-    color: black;
+    color: #000;
 }
 body{
     font-family: 'Raleway', sans-serif;
-    color: black;
+    color: #000;
 }
 
 /********** création du header ********************/
@@ -51,7 +51,7 @@ header{
     margin: 0 38px;
 }
 .menu-item a:hover{
-    color: #0064fa;
+    color: #0065FC;
 }
     /* format du titre **********/
 #title{
@@ -68,6 +68,7 @@ main{
     padding: 0 80px;
 }
     /* installation de la barre de recherche **********/
+    /* TODO revoir la conception de la barre de recherche */
 form{
     max-width: 555px;
     height: 70px;
@@ -99,9 +100,9 @@ label span{
     padding-left: 15px;
     font-size: 24px;
     font-weight: bold;
-    color: black;
+    color: #000;
 }
-#large-search-button{
+#large-searchButton{
     width: 180px;
     height: 70px;
     position: absolute;
@@ -109,12 +110,12 @@ label span{
     right: -2px;
     border: none;
     border-radius: 0 24px 24px 0;
-    background-color: #0064fa;
+    background-color: #0065FC;
     font-size: 24px;
     font-weight: 700;
     color: #fff;
 }
-#small-search-button{
+#small-searchButton{
     display: none;
 }
 
@@ -129,7 +130,8 @@ label span{
     padding-left: 10px;
     margin-bottom: 12px;
 }
-#wrap-filters-buttons{
+/*  TODO  prévoir l'effet de survol sur les filtres */
+#wrap-filtersButtons{
     display: flex;
     flex-wrap: wrap;
 }
@@ -137,7 +139,7 @@ label span{
     display: flex;
     margin: 0 28px 10px 0;
 }
-.wrap-icon-filter{
+.wrap-iconFilter{
     max-width: 34px;
     margin: 0;
 }
@@ -147,8 +149,8 @@ label span{
     font-size: 26px;
     padding-top: 21px;
     border-radius: 50%;
-    color: #0064fa;
-    background-color: #deebff;
+    color: #0065FC;
+    background-color: #DEEBFF;
     opacity: 0.99;
     text-align: center;
 }
@@ -174,17 +176,65 @@ label span{
     padding-top: 7px;
     margin-right: 10px;
     border-radius: 50%;
-    color: #0064fa;
+    color: #0065FC;
     border: solid 2px #F2F2F2;
     text-align: center;
     flex-shrink: 0;
+}
+
+    /* création du modèle de card **********/
+
+.card{
+    margin: 10px;
+    width: 33%;
+    padding: 1%;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 5px 5px 7px #d9d9d9;
+}
+.card-link{
+    text-decoration: none;
+    color: #000;
+}
+.card-image{
+    width: 100%;
+    margin-bottom: 2%;
+    max-height: 124px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+.card-info{
+    padding: 0 2%;
+}
+.card-title{
+    margin: 0;
+    padding-bottom: 2%;
+    font-size: 22px;
+}
+.card-nightInfo{
+    margin: 0;
+    padding-bottom: 2%;
+}
+.card-nightInfo em{
+    font-style: normal;
+    font-weight: bold;
+}
+.card-score{
+    color: #F2F2F2;
+}
+.full-star{
+    color: #0065FC;
+}
+    /* section accomodation **********/
+#accommodation{
+    background-color: #F2F2F2;
 }
 /********** gestion adaptative des écrans ********************/
 
     /** pour écran de tablette **********/
 @media screen and (min-width: 768px){
     .menu-item:hover{
-        border-top: solid 4px #0064fa;
+        border-top: solid 4px #0065FC;
     }
 }
 
@@ -219,7 +269,7 @@ label span{
         border-bottom: solid 2px #F2F2F2;
     }
     .menu-item:hover{
-        border-bottom: solid 3px #0064fa;
+        border-bottom: solid 3px #0065FC;
     }
     .menu-item a{
         padding: 30px 0 15px 0;
@@ -253,10 +303,10 @@ label span{
         padding-top: 18px;
         font-size: 20px;
     }
-    #large-search-button{
+    #large-searchButton{
         display: none;
     }
-    #small-search-button{
+    #small-searchButton{
         width: 56px;
         height: 56px;
         display: block;
@@ -265,7 +315,7 @@ label span{
         right: -2px;
         border: none;
         border-radius: 18px;
-        background-color: #0064fa;
+        background-color: #0065FC;
         color: #fff;
         font-size: 20px;
     }
@@ -276,7 +326,7 @@ label span{
     .button-filter{
         margin-right: 12px;
     }
-    .wrap-icon-filter{
+    .wrap-iconFilter{
         max-width: 30px;
     }
     .icon-filter{
