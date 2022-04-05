@@ -12,6 +12,11 @@
     font-weight: bold;
     color: #000;
 }
+.extra-text{
+    margin: 0;
+    font-size: 28px;
+    color: #000;
+}
 body{
     font-family: 'Raleway', sans-serif;
     color: #000;
@@ -65,7 +70,7 @@ h1{
 
 /********** corps de page, zone principale ********************/
 main{
-    padding: 0 80px;
+    padding: 0 70px;
 }
     /* installation de la barre de recherche **********/
     /* TODO revoir la conception de la barre de recherche */
@@ -75,7 +80,7 @@ form{
     position: relative;
     border: solid 2px #F2F2F2;
     border-radius: 24px;
-    margin-bottom: 38px;
+    margin-bottom: 33px;
 }
 label{
     width: 65px;
@@ -120,6 +125,9 @@ label span{
 }
 
     /* mise en place des filtres **********/
+#filters{
+    margin-bottom: 48px;
+}
 #wrap-filters{
     display: flex;
     align-items: baseline;
@@ -221,8 +229,8 @@ label span{
 .full-star{
     color: #0065FC;
 }
-    /* version de card hébergements par localité **********/
-.wrap-accommodation{
+    /* version de la card hébergement par localité **********/
+.card-accommodation{
     display: flex;
     flex-direction: column;
 }
@@ -231,8 +239,8 @@ label span{
     height: 124px;
     border-radius: 20px 20px 0 0;
 }
-    /* version de card hébergements populaires **********/
-.wrap-popular{
+    /* version de la card hébergement populaire **********/
+.card-popular{
     display: flex;
     justify-content: stretch;
 }
@@ -242,17 +250,32 @@ label span{
     border-radius: 20px 0 0 20px;
     flex: 1;
 }
-    /* section hébergements par localité **********/
-#gallery-location{
-    width: 30%;
-    padding: 10px;
-    background-color: #F2F2F2;
+    /* container des galleries hébergements par localité **********/
+    /* et hébergements populaires *********************************/
+#wrap-galleries{
+    display: flex;
+    column-gap: 2.8%;
 }
-    /* section hébergements les plus populaires **********/
-#gallery-popular{
-    width: 33%;
-    padding: 10px;
+    /* gallerie des hébergements par localité **********/
+#gallery-location{
+    flex-basis: 65.5%;
+    padding: 3% 2.8%;
     background-color: #F2F2F2;
+    border-radius: 24px;
+}
+#wrap-galleryLocation{
+
+}
+    /* gallerie des hébergements les plus populaires **********/
+#gallery-popular{
+    flex: 1;
+    padding: 3% 2.8%;
+    background-color: #F2F2F2;
+    border-radius: 24px;
+}
+#gallery-popularTitle{
+    display: flex;
+    justify-content: space-between;
 }
 /********** gestion adaptative des écrans ********************/
 
