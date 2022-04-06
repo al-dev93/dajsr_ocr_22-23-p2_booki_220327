@@ -17,6 +17,10 @@
     font-size: 28px;
     color: #000;
 }
+.link{
+    text-decoration: none;
+    color: #000;
+}
 body{
     font-family: 'Raleway', sans-serif;
     color: #000;
@@ -51,14 +55,13 @@ header{
     justify-content: stretch;
 }
 .menu-item a{
-    text-decoration: none;
     padding-top: 65px;
     margin: 0 38px;
 }
 .menu-item a:hover{
     color: #0065FC;
 }
-    /* format du titre **********/
+/*  format du titre **********/
 #title{
     margin-top: 50px;
 }
@@ -72,7 +75,7 @@ h1{
 main{
     padding: 0 70px;
 }
-    /* installation de la barre de recherche **********/
+/** création de la barre de recherche **********/
     /* TODO revoir la conception de la barre de recherche */
 form{
     max-width: 555px;
@@ -123,8 +126,7 @@ label span{
 #small-searchButton{
     display: none;
 }
-
-    /* mise en place des filtres **********/
+/** création des filtres **********/
 #filters{
     margin-bottom: 48px;
 }
@@ -189,35 +191,42 @@ label span{
     text-align: center;
     flex-shrink: 0;
 }
-    /* modèle de base pour les cards **********/
+/** card pour les hébergements par localité **********/
 .card{
-    padding: 1%;
+    max-width: 30.6667%;
+    padding: 0.6%;
+    margin: 2.8% 0 1.2% 0;
+    flex: auto;
     border-radius: 20px;
     background-color: #fff;
     box-shadow: 5px 5px 7px #d9d9d9;
 }
-.card-link{
-    text-decoration: none;
-    color: #000;
+.wrap-card{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
 }
 .card img{
+    max-height: 150px;
+    width: 100%;
     object-fit: cover;
+    border-radius: 20px 20px 0 0;
 }
 .card-info{
-    padding: 0 2%;
-    margin-top: 2%;
+    margin-top: 3.5%;
+    padding: 0.7% 4% 0;
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 .card-title{
-    margin: 0;
-    padding-bottom: 2%;
+    margin: 0 0 2.2% 0;
     font-size: 22px;
 }
 .card-nightInfo{
-    margin: 0;
-    padding-bottom: 2%;
+    margin: 0 0 2.5% 0;
 }
 .card-nightInfo em{
     font-style: normal;
@@ -225,51 +234,59 @@ label span{
 }
 .card-score{
     color: #F2F2F2;
+    padding-bottom: 2%;
 }
 .full-star{
     color: #0065FC;
 }
-    /* version de la card hébergement par localité **********/
-.card-accommodation{
-    display: flex;
-    flex-direction: column;
+/*  Adaptation de la card pour la version hébergements populaires **********/
+#gallery-popular .card{
+    max-width: 100%;
+    margin: 8.2% 0 9.5%;
+    padding: 1%;
 }
-.card-wideImage{
-    width: 100%;
-    height: 124px;
-    border-radius: 20px 20px 0 0;
+#gallery-popular .wrap-card{
+    flex-direction: row;
 }
-    /* version de la card hébergement populaire **********/
-.card-popular{
-    display: flex;
-    justify-content: stretch;
-}
-.card-highImage{
-    width: 100%;
-    height: 144px;
+#gallery-popular img{
+    min-height: 180px;
+    width: 38%;
     border-radius: 20px 0 0 20px;
+}
+#gallery-popular .card-info{
+    padding: 0 2% 2% 6%;
     flex: 1;
 }
-    /* container des galleries hébergements par localité **********/
-    /* et hébergements populaires *********************************/
+#gallery-popular .card-nightInfo{
+    padding-top: 1.5%;
+}
+/** container des galleries hébergements **********
+/** par localité et les pluspopulaires ************/
 #wrap-galleries{
     display: flex;
-    column-gap: 2.8%;
+    column-gap: 2.8%; /* TODO voir à remplacer par une marge */
 }
-    /* gallerie des hébergements par localité **********/
+/*  gallerie des hébergements par localité **********/
 #gallery-location{
     flex-basis: 65.5%;
-    padding: 3% 2.8%;
+    padding: 3% 3% 0 2.7%;
     background-color: #F2F2F2;
     border-radius: 24px;
 }
-#wrap-galleryLocation{
-
+#gallery-location > a{
+    margin-left: 0.8%;
 }
-    /* gallerie des hébergements les plus populaires **********/
+#wrap-galleryLocation{
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 4%; /* TODO voir à remplacer par une marge à gauche et enlever la première de chaque rang */
+    margin-bottom: 3.8%;
+}
+/* gallerie des hébergements les plus populaires **********/
 #gallery-popular{
     flex: 1;
-    padding: 3% 2.8%;
+    padding: 3% 3.2% 0 3%;
     background-color: #F2F2F2;
     border-radius: 24px;
 }
@@ -277,22 +294,23 @@ label span{
     display: flex;
     justify-content: space-between;
 }
+
 /********** gestion adaptative des écrans ********************/
 
-    /** pour écran de tablette **********/
+/** pour écran de tablette **********/
 @media screen and (min-width: 768px){
     .menu-item:hover{
         border-top: solid 4px #0065FC;
     }
 }
 
-    /** pour écran de smartphone **********/
+/** pour écran de smartphone **********/
 @media screen and (max-width: 768px) {
-/* propriétés globales **********/
+/*  propriétés globales **********/
     .plain-text{
         font-size: 18px;
     }
-/* header **********/
+/*  header **********/
     header{
         padding:0;
         margin-bottom: 42px;
@@ -305,7 +323,7 @@ label span{
         width: 100px;
         padding-top: 30px;
     }
-    /* adaptation du menu **********/
+/*  adaptation du menu **********/
     #menu{
         align-self: stretch;
     }
@@ -323,7 +341,7 @@ label span{
         padding: 30px 0 15px 0;
         margin: 0 auto;
     }
-    /* adaptation du titre **********/
+/*  adaptation du titre **********/
     #title{
         width: 85%;
         margin: 40px 0 0 26px;
@@ -332,11 +350,11 @@ label span{
         font-size: 24px;
         font-weight: 700;
     }
-/* corps de page, zone pincipale **********/
+/*  corps de page, zone pincipale **********/
     main{
         padding: 0 25px;
     }
-    /* barre de recherche ***********/
+/*  barre de recherche ***********/
     form{
         width: 100%;
         height: 56px;
@@ -367,7 +385,7 @@ label span{
         color: #fff;
         font-size: 20px;
     }
-    /* adaptation des filtres */
+/*  adaptation des filtres */
     #wrap-filters{
         flex-direction: column;
     }
