@@ -5,12 +5,15 @@
 .plain-text{
     margin: 0;
     font-size: 20px;
-    color: #000;
 }
 .bold-text{
     font-size: 24px;
     font-weight: bold;
     color: #000;
+}
+.medium-text{
+    margin: 0;
+    font-size: 22px;
 }
 .extra-text{
     margin: 0;
@@ -28,16 +31,17 @@ body{
 
 /********** création du header ********************/
 header{
-    margin-bottom: 25px;
-    padding: 0 80px;
+    margin: 0 75px 25px;
+    /* padding: 0 80px; */
 }
 #top-header{
     display: flex;
     justify-content: space-between;
 }
 #logo{
-    width: 120px;
-    padding-top: 60px;
+    width: 140px;
+    height: auto;
+    padding: 60px 0 0 15px;
 }
     /*création du menu **********/
 #menu{
@@ -57,13 +61,14 @@ header{
 .menu-item a{
     padding-top: 65px;
     margin: 0 38px;
+    color: #000;
 }
 .menu-item a:hover{
     color: #0065FC;
 }
 /*  format du titre **********/
 #title{
-    margin-top: 50px;
+    margin-top: 48px;
 }
 h1{
     margin: 0 0 15px 0;
@@ -128,7 +133,7 @@ label span{
 }
 /** création des filtres **********/
 #filters{
-    margin-bottom: 48px;
+    margin-bottom: 50px;
 }
 #wrap-filters{
     display: flex;
@@ -176,15 +181,16 @@ label span{
     font-weight: bold;
 }
 #info-free{
+    margin-left: 6px;
     display: flex;
     align-items: baseline;
 }
 .icon-info{
-    width: 34px;
-    height: 34px;
-    font-size: 16px;
-    padding-top: 7px;
-    margin-right: 10px;
+    width: 31px;
+    height: 31px;
+    font-size: 15px;
+    padding-top: 6px;
+    margin-right: 15px;
     border-radius: 50%;
     color: #0065FC;
     border: solid 2px #F2F2F2;
@@ -222,11 +228,10 @@ label span{
     justify-content: space-between;
 }
 .card-title{
-    margin: 0 0 2.2% 0;
-    font-size: 22px;
+    margin-bottom: 2.2%;
 }
 .card-nightInfo{
-    margin: 0 0 2.5% 0;
+    margin-bottom: 2.5%;
 }
 .card-nightInfo em{
     font-style: normal;
@@ -264,11 +269,11 @@ label span{
 /** par localité et les pluspopulaires ************/
 #wrap-galleries{
     display: flex;
-    column-gap: 2.8%; /* TODO voir à remplacer par une marge */
 }
 /*  gallerie des hébergements par localité **********/
 #gallery-location{
     flex-basis: 65.5%;
+    margin-right: 2.8%;
     padding: 3% 3% 0 2.7%;
     background-color: #F2F2F2;
     border-radius: 24px;
@@ -310,18 +315,27 @@ label span{
     .plain-text{
         font-size: 18px;
     }
+    .bold-text{
+        font-size: 22px;
+    }
+    .medium-text{
+        font-size: 20px;
+    }
+    .extra-text{
+        font-size: 24px;
+    }
 /*  header **********/
     header{
         padding:0;
-        margin-bottom: 42px;
+        margin: 0 0 42px 0;
     }
     #top-header{
         flex-direction: column;
         align-items: center;
     }
     #logo{
-        width: 100px;
-        padding-top: 30px;
+        width: 125px;
+        padding-top: 25px;
     }
 /*  adaptation du menu **********/
     #menu{
@@ -344,7 +358,7 @@ label span{
 /*  adaptation du titre **********/
     #title{
         width: 85%;
-        margin: 40px 0 0 26px;
+        margin: 40px 0 0 24px;
     }
     h1{
         font-size: 24px;
@@ -352,12 +366,13 @@ label span{
     }
 /*  corps de page, zone pincipale **********/
     main{
-        padding: 0 25px;
+        padding: 0;
     }
 /*  barre de recherche ***********/
     form{
-        width: 100%;
+        /* width: 100%; */
         height: 56px;
+        margin: 0 30px 36px 24px;
     }
     #location{
         font-size: 20px;
@@ -386,11 +401,18 @@ label span{
         font-size: 20px;
     }
 /*  adaptation des filtres */
+    #filters{
+    margin-bottom: 74px;
+    }
     #wrap-filters{
         flex-direction: column;
+        margin: 0 0 24px 24px;
+    }
+    #wrap-filters > p{
+        padding: 0;
     }
     .button-filter{
-        margin-right: 12px;
+        margin-right: 5px;
     }
     .wrap-iconFilter{
         max-width: 30px;
@@ -407,5 +429,59 @@ label span{
         padding: 18px 18px 0 44px;
         border-radius : 0 30px 30px 0;
         font-size: 18px;
+    }
+    #info-free{
+        margin-left: 20px;
+    }
+/*  sortie des galeries des hébergements dans un flux vertical */
+    .card{
+        max-width: 100%;
+        margin-bottom: 1.5%;
+    }
+    .card img{
+        max-height: 130px;
+    }
+    .card-info{
+        margin-top: 2%;
+    }
+    .card-title{
+        margin-bottom: 0.8%;
+    }
+    .card-nightInfo{
+        margin-bottom: 1.5%;
+    }
+    #gallery-popular .card{
+        margin: 0 0 2.5%;
+    }
+    #gallery-popularTitle{
+        margin-bottom: 9%;
+    }
+    #gallery-popular img{
+        min-height: 155px;
+    }
+    #wrap-galleries{
+        flex-direction: column;
+    }
+    #gallery-popular{
+        width: 100%;
+        margin-bottom: 13%;
+        padding: 3% 6% 0;
+        order: 1;
+        border-radius: initial;
+    }    
+    #gallery-location{
+        margin-right: 2%;
+        padding: 3% 6% 0;
+        order: 2;
+        border-radius: initial;
+        background-color: initial;
+    }
+    #wrap-galleryLocation{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin: 3.8% 0 7.5%;
+    }
+    #gallery-location > a{
+        margin: 0;
     }
 }
