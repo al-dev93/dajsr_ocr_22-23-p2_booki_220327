@@ -16,7 +16,7 @@
 <body>
     <header>
         <div id="top-header">
-            <img id="logo" src="./images/logo/Booki.png" alt="logo booki"> <!-- TODO encadrer le logo dans un lien-->
+            <a href="#"><img id="logo" src="./images/logo/Booki.png" alt="logo booki"></a> <!-- TODO encadrer le logo dans un lien-->
             <!-- menu de la page -->
             <nav id="menu">
                 <ul>
@@ -35,12 +35,10 @@
     <main>
         <!-- barre de recherche -->
         <form method="post" action="#">
-            <label for="location"><span class="fas fa-map-marker-alt"></span></label>
-            <input type="search" id="location" name="location" placeholder="Marseille, France"/>
-            <input id="large-searchButton" type="submit" value="Rechercher" />
-            <button id="small-searchButton" type="submit">
-                <i class="fas fa-search"></i>
-            </button>
+            <label class="fas fa-map-marker-alt medium-text" for="location"></label>
+            <input type="search" id="location" class="bold-text" name="location" value="Marseille, France"/>
+            <button id="large-searchButton" class="bold-text" type="submit">Rechercher</button>
+            <button id="small-searchButton" type="submit"><i class="fas fa-search"></i></button>
         </form>
         <!-- création des filtres -->
         <div id="filters">
@@ -49,19 +47,19 @@
                 <div id="wrap-filtersButtons">
                     <div class="button-filter">
                         <p class="wrap-iconFilter"><i class="fas fa-money-bill-wave icon-filter"></i></p>
-                        <p class="label-filter">Économique</p>
+                        <p class="label-filter bold-text">Économique</p>
                     </div>
-                    <div class="button-filter">
+                    <div class="button-filter move-filter">
                         <p class="wrap-iconFilter"><i class="fas fa-child icon-filter"></i></p>
-                        <p class="label-filter">Familial</p>
+                        <p class="label-filter bold-text">Familial</p>
                     </div>
                     <div class="button-filter">
                         <p class="wrap-iconFilter"><i class="fas fa-heart icon-filter"></i></p>
-                        <p class="label-filter">Romantique</p>
+                        <p class="label-filter bold-text">Romantique</p>
                     </div>
                     <div class="button-filter">
                         <p class="wrap-iconFilter"><i class="fas fa-dog icon-filter"></i></p>
-                        <p class="label-filter">Animaux autorisés</p>
+                        <p class="label-filter bold-text">Animaux autorisés</p>
                     </div>
                 </div>
             </div>
