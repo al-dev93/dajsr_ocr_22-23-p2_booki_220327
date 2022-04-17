@@ -2,20 +2,36 @@
 *{
     box-sizing: border-box;
 }
+input[type="search"] {
+    -webkit-appearance: none;
+    border-radius: 0;
+    background-color: transparent;
+}
 .plain-text{
     margin: 0;
     font-size: 20px;
-    color: #000;
+}
+.medium-text{
+    margin: 0;
+    font-size: 22px;
 }
 .bold-text{
     font-size: 24px;
     font-weight: bold;
     color: #000;
 }
+.large-text{
+    margin: 0;
+    font-size: 25px;
+}
 .extra-text{
     margin: 0;
     font-size: 28px;
     color: #000;
+}
+h1{
+    font-size: 28px;
+    font-weight: 900;
 }
 .link{
     text-decoration: none;
@@ -28,136 +44,139 @@ body{
 
 /********** création du header ********************/
 header{
-    margin-bottom: 25px;
-    padding: 0 80px;
+    margin: 0 75px 25px;
 }
 #top-header{
     display: flex;
     justify-content: space-between;
 }
 #logo{
-    width: 120px;
-    padding-top: 60px;
+    width: 140px;
+    height: auto;
+    padding: 60px 0 0 15px;
 }
-    /*création du menu **********/
+/* création du menu **********/
 #menu{
     display: flex;
+    align-items: flex-start;
 }
 #menu ul{
-    display: flex;
     margin: 0;
     padding: 0;
+    display: flex;
+    align-items: flex-end;
 }
 .menu-item{
     list-style: none;
-    flex: 1;
     display: flex;
-    justify-content: stretch;
 }
 .menu-item a{
-    padding-top: 65px;
-    margin: 0 38px;
+    padding: 61px 43px 0;
+    border-top: 4px solid #fff;
+    text-align: center;
+    color: #000;
 }
 .menu-item a:hover{
     color: #0065FC;
+    border-color: #0065FC;
 }
-/*  format du titre **********/
+/* format du titre **********/
 #title{
-    margin-top: 50px;
+    margin-top: 48px;
 }
 h1{
-    margin: 0 0 15px 0;
-    font-size: 28px;
-    font-weight: 900;
+    margin-bottom: 10px;
 }
 
 /********** corps de page, zone principale ********************/
 main{
-    padding: 0 70px;
+    margin: 0 70px;
 }
 /** création de la barre de recherche **********/
     /* TODO revoir la conception de la barre de recherche */
 form{
-    max-width: 555px;
+    max-width: 554px;
     height: 70px;
     position: relative;
-    border: solid 2px #F2F2F2;
-    border-radius: 24px;
-    margin-bottom: 33px;
+    margin-bottom: 28px;
 }
 label{
-    width: 65px;
+    width: 70px;
     height: 70px;
+    padding-top: 24px;
     position: absolute;
-    top: -2px;
-    left: -2px;
     border-radius: 24px 0 0 24px;
     background-color: #F2F2F2;
-}
-label span{
-    width: 100%;
-    padding-top: 24px;
-    font-size: 22px;
     text-align: center;
+    cursor: pointer;
 }
 #location{
-    height: 100%;
+    width: 210px;
+    height: 70px;
+    width: calc(100% - 177px - 70px);
     position: absolute;
-    left: 65px;
+    left: 70px;
+    padding-left: 22px;
     border: none;
-    padding-left: 15px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #000;
+    border-top: solid 2px #F2F2F2;
+    border-bottom: solid 2px #F2F2F2;
+    border-color: #000; /**************! Pour test, à enlever *********************/
 }
 #large-searchButton{
-    width: 180px;
+    width: 177px;
     height: 70px;
     position: absolute;
-    top: -2px;
-    right: -2px;
+    right: 0px;
     border: none;
     border-radius: 0 24px 24px 0;
     background-color: #0065FC;
-    font-size: 24px;
-    font-weight: 700;
     color: #fff;
+    cursor: pointer;
 }
 #small-searchButton{
     display: none;
 }
 /** création des filtres **********/
 #filters{
-    margin-bottom: 48px;
+    margin-bottom: 50px;
 }
 #wrap-filters{
     display: flex;
-    align-items: baseline;
-    margin-bottom: 40px;
+    align-items: flex-start;
+    margin-bottom: 48px;
 }
 #wrap-filters > p{
-    margin: 0 35px 0 0;
-    padding-left: 10px;
-    margin-bottom: 12px;
+    margin: 0 40px 0 0;
+    padding: 22px 0 0 10px;
 }
 /*  TODO  prévoir l'effet de survol sur les filtres */
 #wrap-filtersButtons{
     display: flex;
+    column-gap: 27px;
     flex-wrap: wrap;
 }
 .button-filter{
     display: flex;
-    margin: 0 28px 10px 0;
+    margin-top: 10px;
+    border-radius: 34px;
+    border-color: #d9d9d9;
+}
+.button-filter:hover{
+    border-color: #DEEBFF;
+    background-color: #F2F2F2;
+    cursor: pointer;
 }
 .wrap-iconFilter{
-    max-width: 34px;
+    width: 34px;
+    height: 68px;
+    border-radius: 34px 0 0 34px;
     margin: 0;
 }
 .icon-filter{
     width: 68px;
     height: 68px;
     font-size: 26px;
-    padding-top: 21px;
+    line-height: 68px;
     border-radius: 50%;
     color: #0065FC;
     background-color: #DEEBFF;
@@ -167,36 +186,33 @@ label span{
 .label-filter{
     height: 68px;
     margin: 0;
-    padding: 18px 25px 0 50px;
-    border-top: solid 3px #d9d9d9;
-    border-right: solid 3px #d9d9d9;
-    border-bottom: solid 3px #d9d9d9;
+    padding: 18px 32px 0 45px;
+    border-color: inherit;
+    border-style: solid;
+    border-width: 3px;
+    border-left: none;
     border-radius : 0 34px 34px 0;
-    font-size: 25px;
-    font-weight: bold;
 }
 #info-free{
+    margin-left: 6px;
     display: flex;
-    align-items: baseline;
+    align-items:center;
 }
 .icon-info{
-    width: 34px;
-    height: 34px;
-    font-size: 16px;
-    padding-top: 7px;
-    margin-right: 10px;
+    width: 31px;
+    height: 31px;
+    font-size: 15px;
+    margin-right: 15px;
     border-radius: 50%;
     color: #0065FC;
     border: solid 2px #F2F2F2;
     text-align: center;
+    line-height: 27px;
     flex-shrink: 0;
 }
-/** card pour les hébergements par localité **********/
+/** structure de base de la card hébergement **********/
 .card{
-    max-width: 30.6667%;
     padding: 0.6%;
-    margin: 2.8% 0 1.2% 0;
-    flex: auto;
     border-radius: 20px;
     background-color: #fff;
     box-shadow: 5px 5px 7px #d9d9d9;
@@ -205,201 +221,222 @@ label span{
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: stretch;
 }
-.card img{
-    max-height: 150px;
+.wrap-card img{
     width: 100%;
+    height: 152px;
     object-fit: cover;
     border-radius: 20px 20px 0 0;
 }
 .card-info{
-    margin-top: 3.5%;
-    padding: 0.7% 4% 0;
     flex: 1;
+    padding: 4.2% 4.7% 2%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+}
+.card-description{
+    flex: 1;
 }
 .card-title{
-    margin: 0 0 2.2% 0;
-    font-size: 22px;
+    margin-bottom: 2.2%;
 }
 .card-nightInfo{
-    margin: 0 0 2.5% 0;
+    margin-bottom: 2.5%;
 }
 .card-nightInfo em{
     font-style: normal;
     font-weight: bold;
 }
 .card-score{
+    display: flex;
     color: #F2F2F2;
-    padding-bottom: 2%;
 }
 .full-star{
     color: #0065FC;
 }
-/*  Adaptation de la card pour la version hébergements populaires **********/
-#gallery-popular .card{
-    max-width: 100%;
-    margin: 8.2% 0 9.5%;
-    padding: 1%;
-}
-#gallery-popular .wrap-card{
-    flex-direction: row;
-}
-#gallery-popular img{
-    min-height: 180px;
-    width: 38%;
-    border-radius: 20px 0 0 20px;
-}
-#gallery-popular .card-info{
-    padding: 0 2% 2% 6%;
-    flex: 1;
-}
-#gallery-popular .card-nightInfo{
-    padding-top: 1.5%;
-}
-/** container des galleries hébergements **********
-/** par localité et les pluspopulaires ************/
-#wrap-galleries{
+/***********************************************************/
+/** sections des hébergements locaux et populaires         */
+/** containers des cards hébergements locaux et populaires */
+/** intégration des cards                                  */
+/***********************************************************/
+/* container flex des sections hébergements locaux et hébergements populaires **********/
+#wrap-housing{
     display: flex;
-    column-gap: 2.8%; /* TODO voir à remplacer par une marge */
 }
-/*  gallerie des hébergements par localité **********/
-#gallery-location{
-    flex-basis: 65.5%;
-    padding: 3% 3% 0 2.7%;
+/*  section des hébergements locaux **********/
+#local-housing{
+    width: 65.5%;
+    margin-right: 2.8%;
+    padding: 3% 3% 2.6% 2.7%;
     background-color: #F2F2F2;
     border-radius: 24px;
 }
-#gallery-location > a{
+#local-housing > h2{
+    margin-bottom: 2.8%;
+}
+#local-housing > a{
     margin-left: 0.8%;
 }
-#wrap-galleryLocation{
+/* container flex des cards hébergements locaux **********/
+#wrap-localHousing{
     height: auto;
     display: flex;
+    justify-content: stretch;
     flex-wrap: wrap;
-    column-gap: 4%; /* TODO voir à remplacer par une marge à gauche et enlever la première de chaque rang */
-    margin-bottom: 3.8%;
+    column-gap: 3.8%; /* TODO voir à remplacer par une marge à gauche et enlever la première de chaque rang */
+    row-gap: 41px;
+    margin-bottom: 5.4%;
 }
-/* gallerie des hébergements les plus populaires **********/
-#gallery-popular{
+/* Intégration des cards hébergements locaux **********/
+#wrap-localHousing .card{
+    width: 30.8%;
+}
+/** surcharge de la card de base pour les hébergements populaires **********/
+#wrap-popularHousing .wrap-card{
+    flex-direction: row;
+    align-items: stretch;
+}
+#wrap-popularHousing .card img{
+    width: 38%;
+    height: 175px;
+    max-height: auto;
+    border-radius: 20px 0 0 20px;
+}
+#wrap-popularHousing .card-info{
+    padding: 3% 2% 2% 6%;
     flex: 1;
-    padding: 3% 3.2% 0 3%;
+}
+#wrap-popularHousing .card-title{
+    margin-bottom: 4%;
+}
+#wrap-popularHousing .card-nightInfo{
+    margin-bottom: 21.8%;
+}
+/* section des hébergements les plus populaires **********/
+#popular-housing{
+    flex: 1;
+    padding: 3% 3.2% 2.6% 3%;
     background-color: #F2F2F2;
     border-radius: 24px;
 }
-#gallery-popularTitle{
+#title-popularHousing{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 8.2%;
+}
+/* container flex des cards hébergements populaires **********/
+#wrap-popularHousing{
+    display: flex;
+    flex-direction: column;
+    row-gap: 51px;
+}
+/*  intégration de la card dans le container des hébergements populaires **********/
+#wrap-popularHousing .card{
+    padding: 1%;
 }
 
 /********** gestion adaptative des écrans ********************/
 
 /** pour écran de tablette **********/
-@media screen and (min-width: 768px){
-    .menu-item:hover{
-        border-top: solid 4px #0065FC;
-    }
-}
-
-/** pour écran de smartphone **********/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px){
 /*  propriétés globales **********/
     .plain-text{
         font-size: 18px;
     }
-/*  header **********/
-    header{
-        padding:0;
-        margin-bottom: 42px;
+    .medium-text{
+        font-size: 20px;
     }
-    #top-header{
-        flex-direction: column;
-        align-items: center;
+    .bold-text{
+        font-size: 22px;
     }
-    #logo{
-        width: 100px;
-        padding-top: 30px;
+    .large-text{
+        font-size: 23px;
     }
-/*  adaptation du menu **********/
-    #menu{
-        align-self: stretch;
-    }
-    #menu ul{
-        flex: 1;
-        justify-content: stretch;
-    }
-    .menu-item{
-        border-bottom: solid 2px #F2F2F2;
-    }
-    .menu-item:hover{
-        border-bottom: solid 3px #0065FC;
-    }
-    .menu-item a{
-        padding: 30px 0 15px 0;
-        margin: 0 auto;
-    }
-/*  adaptation du titre **********/
-    #title{
-        width: 85%;
-        margin: 40px 0 0 26px;
+    .extra-text{
+        font-size: 24px;
     }
     h1{
         font-size: 24px;
         font-weight: 700;
     }
-/*  corps de page, zone pincipale **********/
+    .menu-item a{
+        padding: 40px 30px 0;
+        border-top: 4px solid #fff;
+    }
+    header{
+        margin: 0 50px 25px;
+    }
+/* corps de page, zone pincipale **********/
     main{
-        padding: 0 25px;
+        margin: 0;
     }
-/*  barre de recherche ***********/
+/* barre de recherche **********/
     form{
-        width: 100%;
+        width: 400px;
         height: 56px;
-    }
-    #location{
-        font-size: 20px;
+        margin: 0 auto 37px 50px;
     }
     label{
         height: 56px;
-    }
-    label span{
+        width: 56px;
         padding-top: 18px;
-        font-size: 20px;
+        border-radius: 18px 0 0 18px;
+    }
+    #location{
+        width: calc(100% - 56px - 56px + 18px);
+        height: 56px;
+        left: 56px;
+        padding-left: 20px;
     }
     #large-searchButton{
         display: none;
     }
     #small-searchButton{
+        display: initial;
         width: 56px;
         height: 56px;
-        display: block;
         position: absolute;
-        top: -2px;
-        right: -2px;
+        right: 0px;
         border: none;
         border-radius: 18px;
         background-color: #0065FC;
         color: #fff;
-        font-size: 20px;
     }
-/*  adaptation des filtres */
+/* adaptation des filtres **********/
+    #filters{
+        margin: 0 100px 60px 18px;
+    }
     #wrap-filters{
-        flex-direction: column;
+        margin-bottom: 35px;
+    }
+    #wrap-filters > p{
+        margin: 0 20px 0 0;
+        padding: 27px 0 0 30px;
+    }
+    #wrap-filtersButtons{
+        column-gap: 5px;
+    }
+    #wrap-filtersButtons :nth-child(2){
+        order: 3;
+    }
+    #wrap-filtersButtons :nth-child(3){
+        order: 2;
+    }
+    #wrap-filtersButtons :nth-child(4){
+        order: 4;
     }
     .button-filter{
-        margin-right: 12px;
+        margin-right: 5px;
     }
     .wrap-iconFilter{
-        max-width: 30px;
+        width: 30px;
+        height: 60px;
     }
     .icon-filter{
         width: 60px;
         height: 60px;
-        font-size: 18px;
-        padding-top: 21px;
+        line-height: 60px;
+        font-size: 22px;
         border-radius: 50%;
     }
     .label-filter{
@@ -407,5 +444,189 @@ label span{
         padding: 18px 18px 0 44px;
         border-radius : 0 30px 30px 0;
         font-size: 18px;
+    }
+    #info-free{
+        margin-left: 20px;
+    }
+
+/** container des cards hébergements par localité et populaires **********/
+/** et intégration des cards *********************************************/
+    #wrap-housing{
+        flex-direction: column;
+        align-items: stretch;
+    }
+/* container les plus populaires **********/
+    #popular-housing{
+        margin-bottom: 13%;
+        order: 1;
+        border-radius: initial;
+    }
+    #title-popularHousing{
+        width: 100%;
+    }
+    #wrap-popularHousing{
+        flex-direction: row;
+        column-gap: 2%;
+    }
+/* intégration des cards les plus populaires **********/
+    #wrap-popularHousing .card{
+        width: 32%;
+    }
+/* container hébergements localisés **********/
+    #local-housing{
+        width: 100%;
+        margin: 0;
+        order: 2;
+        border-radius: initial;
+    }
+    #wrap-localHousing{
+        column-gap: 2%;
+    }
+/* intégration des cards par loclité **********/
+    #wrap-localHousing .card{
+        width: 48%;
+    }
+}
+/** pour écran de smartphone **********/
+@media screen and (max-width: 768px) {
+
+/* header **********/
+    header{
+        padding:0;
+        margin: 0 0 40px;
+    }
+    #top-header{
+        flex-direction: column;
+        align-items: center;
+    }
+    #logo{
+        width: 125px;
+        padding: 23px 0 0 20px;
+    }
+/* adaptation du menu **********/
+    #menu{
+        align-self: stretch;
+        align-items: center;
+        margin-bottom: 7px;
+    }
+    #menu ul{
+        flex: 1;
+        justify-content: stretch;
+    }
+    .menu-item{
+        flex: 1;
+    }
+    .menu-item a{
+        width: 100%;
+        border-bottom: solid 3px #F2F2F2;
+        padding: 29px 0 15px;
+        text-align: center;
+    }
+    .menu-item a:hover{
+        border-top: none;
+        border-color: #0065FC;
+    }
+/* adaptation du titre **********/
+    #title{
+        width: 85%;
+        margin: 30px 0 0 24px;
+    }
+    h1{
+        margin: 0 0 15px;
+    }
+/* barre de recherche ***********/
+    form{
+        width: auto;
+        margin: 0 32px 37px 24px;
+    }
+/* adaptation des filtres **********/
+    #filters{
+        margin: 0 0 40px 0;
+    }
+    #wrap-filters{
+        flex-direction: column;
+        margin: 0 0 20px 8px;
+    }
+    #wrap-filters > p{
+        margin: 0 40px 14px 0;
+        padding: 0 0 0 16px;
+    }
+    #wrap-filtersButtons{
+        padding-left: 10px;
+        column-gap: 5px;
+    }
+    #wrap-filtersButtons :nth-child(2){
+        order: 2;
+    }
+    .button-filter{
+        margin: 0 0 11px;
+    }
+    #info-free{
+        margin-left: 20px;
+        align-items: flex-start;
+    }
+    .icon-info{
+        padding-top: 0px;
+        margin-right: 11px;
+    }
+    #info-free > p{
+        padding-top: 5px;
+    }
+/* adaptation des cards par localité pour une largeur de 100% **********/
+    /* .card-info{
+        margin-top: 2%;
+    } */
+    /* .card-title{
+        margin-bottom: 0.8%;
+    }
+    .card-nightInfo{
+        margin-bottom: 1.5%;
+    } */
+/* cartes de la gallerie des plus populaires pour une largeur de 100% **********/
+    #wrap-popularHousing .card img{
+        /* align-self: stretch; */
+        width: 39%;
+        height: 149px;
+    }
+/* sortie des galeries des hébergements en flux vertical **********/
+    #popular-housing{
+        margin-bottom: 13%;
+        padding: 10% 7% 0 6%;
+    }
+    #title-popularHousing{
+        margin-bottom: 9%;
+    }
+    #wrap-popularHousing{
+        /* width: 100%; */
+        /* display: initial; */
+        flex-direction: column;
+        /* align-items: stretch; */
+        row-gap: 15px;
+        /* margin-bottom: 13%; */
+        order: 1;
+        /* border-radius: initial; */
+    }
+    #wrap-popularHousing .card{
+        width: 100%;
+        /* margin: 0 0 2.5%; */
+    }
+    #local-housing{
+        margin-right: 2%;
+        padding: 3% 6% 0;
+        order: 2;
+        border-radius: initial;
+        background-color: initial;
+    }
+    #wrap-localHousing{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        /* margin: 3.8% 0 7.5%; */
+    }
+    #local-housing > a{
+        margin: 0;
+    }
+    #local-housing .card{
+        width: 100%;
+        /* margin: 3.5% 0 1.5%; */
     }
 }
