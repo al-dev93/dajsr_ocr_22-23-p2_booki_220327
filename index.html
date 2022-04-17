@@ -49,7 +49,7 @@
                         <p class="wrap-iconFilter"><i class="fas fa-money-bill-wave icon-filter"></i></p>
                         <p class="label-filter bold-text">Économique</p>
                     </div>
-                    <div class="button-filter move-filter">
+                    <div class="button-filter ">
                         <p class="wrap-iconFilter"><i class="fas fa-child icon-filter"></i></p>
                         <p class="label-filter bold-text">Familial</p>
                     </div>
@@ -68,17 +68,17 @@
                 <p class="plain-text"> Plus de 500 logements sont disponibles dans cette ville</p>
             </div>
         </div>
-        <div id="wrap-galleries">
+        <div id="wrap-housing">
             <!-- Gallerie des hébergements par localité -->
-            <section id="gallery-location">
+            <section id="local-housing">
                 <h2 class="extra-text">Hébergements à Marseille</h2>
-                <div id="wrap-galleryLocation">
+                <div id="wrap-localHousing">
                     <div class="card">
                         <a class="link" href="#">
                             <div class="wrap-card">
                                 <img src="./images/accommodation/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="image des hébergements">
                                 <div class="card-info">
-                                    <div>
+                                    <div class="card-description">
                                         <h3 class="medium-text card-title">Auberge La Cannebière</h3>
                                         <p class="plain-text card-nightInfo">Nuit à partir de <em>25€</em></p>
                                     </div>
@@ -96,7 +96,7 @@
                             <div class="wrap-card">
                                 <img src="./images/accommodation/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="image des hébergements">
                                 <div class="card-info">
-                                    <div>
+                                    <div class="card-description">
                                         <h3 class="medium-text card-title">Hôtel du port</h3>
                                         <p class="plain-text card-nightInfo">Nuit à partir de <em>52€</em></p>
                                     </div>
@@ -114,7 +114,7 @@
                             <div class="wrap-card">
                                 <img src="./images/accommodation/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="image des hébergements">
                                 <div class="card-info">
-                                    <div>
+                                    <div class="card-description">
                                         <h3 class="medium-text card-title">Hôtel Les mouettes</h3>
                                         <p class="plain-text card-nightInfo">Nuit à partir de <em>76€</em></p>
                                     </div>
@@ -132,7 +132,7 @@
                             <div class="wrap-card">
                                 <img src="./images/accommodation/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="image des hébergements">
                                 <div class="card-info">
-                                    <div>
+                                    <div class="card-description">
                                         <h3 class="medium-text card-title">Hôtel de la mer</h3>
                                         <p class="plain-text card-nightInfo">Nuit à partir de <em>46€</em></p>
                                     </div>
@@ -150,7 +150,7 @@
                             <div class="wrap-card">
                                 <img src="./images/accommodation/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="image des hébergements">
                                 <div class="card-info">
-                                    <div>
+                                    <div class="card-description">
                                         <h3 class="medium-text card-title">Auberge Le Panier</h3>
                                         <p class="plain-text card-nightInfo">Nuit à partir de <em>23€</em></p>
                                     </div>
@@ -168,7 +168,7 @@
                             <div class="wrap-card">
                                 <img src="./images/accommodation/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="image des hébergements">
                                 <div class="card-info">
-                                    <div>
+                                    <div class="card-description">
                                         <h3 class="medium-text card-title">Hôtel chez Amina</h3>
                                         <p class="plain-text card-nightInfo">Nuit à partir de <em>96€</em></p>
                                     </div>
@@ -185,64 +185,66 @@
                 <a class="link bold-text" href="#">Afficher plus</a>
             </section>
             <!-- Gallerie des hébergements les plus populaires -->
-            <section id="gallery-popular">
-                <div id="gallery-popularTitle">
+            <section id="popular-housing">
+                <div id="title-popularHousing">
                     <h2 class="extra-text">Les plus populaires</h2>
                     <i class="fas fa-chart-line extra-text"></i>
                 </div>
-                <div class="card">
-                    <a class="link" href="#">
-                        <div class="wrap-card">
-                            <img src="./images/accommodation/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="image des hébergements populaires">
-                            <div class="card-info">
-                                <div>
-                                    <h3 class="medium-text card-title">Hôtel le soleil du matin</h3>
-                                    <p class="plain-text card-nightInfo">Nuit à partir de <em>128€</em></p>
-                                </div>
-                                <div class="card-score">
-                                    <i class="fas fa-star full-star"></i><i class="fas fa-star full-star"></i>
-                                    <i class="fas fa-star full-star"></i><i class="fas fa-star full-star"></i>
-                                    <i class="fas fa-star full-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="card">
-                    <a class="link" href="#">
-                        <div class="wrap-card">
-                            <img src="./images/accommodation/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="image des hébergements populaires">
-                            <div class="card-info">
-                                <div>
-                                    <h3 class="medium-text card-title">Au coeur de l'eau Chambres d'hôtes</h3>
-                                    <p class="plain-text card-nightInfo">Nuit à partir de <em>71€</em></p>
-                                </div>
-                                <div class="card-score">
-                                    <i class="fas fa-star full-star"></i><i class="fas fa-star full-star"></i>
-                                    <i class="fas fa-star full-star"></i><i class="fas fa-star full-star"></i>
-                                    <i class="fas fa-star"></i>
+                <div id="wrap-popularHousing">
+                    <div class="card">
+                        <a class="link" href="#">
+                            <div class="wrap-card">
+                                <img src="./images/accommodation/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="image des hébergements populaires">
+                                <div class="card-info">
+                                    <div class="card-description">
+                                        <h3 class="medium-text card-title">Hôtel le soleil du matin</h3>
+                                        <p class="plain-text card-nightInfo">Nuit à partir de <em>128€</em></p>
+                                    </div>
+                                    <div class="card-score">
+                                        <i class="fas fa-star full-star"></i><i class="fas fa-star full-star"></i>
+                                        <i class="fas fa-star full-star"></i><i class="fas fa-star full-star"></i>
+                                        <i class="fas fa-star full-star"></i>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="card">
-                    <a class="link" href="#">
-                        <div class="wrap-card">
-                            <img src="./images/accommodation/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="image des hébergements populaires">
-                            <div class="card-info">
-                                <div>
-                                    <h3 class="medium-text card-title">Hôtel Tout bleu et Blanc</h3>
-                                    <p class="plain-text card-nightInfo">Nuit à partir de <em>68€</em></p>
-                                </div>
-                                <div class="card-score">
-                                    <i class="fas fa-star full-star"></i><i class="fas fa-star full-star"></i>
-                                    <i class="fas fa-star full-star"></i><i class="fas fa-star full-star"></i>
-                                    <i class="fas fa-star"></i>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a class="link" href="#">
+                            <div class="wrap-card">
+                                <img src="./images/accommodation/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="image des hébergements populaires">
+                                <div class="card-info">
+                                    <div class="card-description">
+                                        <h3 class="medium-text card-title">Au coeur de l'eau Chambres d'hôtes</h3>
+                                        <p class="plain-text card-nightInfo">Nuit à partir de <em>71€</em></p>
+                                    </div>
+                                    <div class="card-score">
+                                        <i class="fas fa-star full-star"></i><i class="fas fa-star full-star"></i>
+                                        <i class="fas fa-star full-star"></i><i class="fas fa-star full-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a class="link" href="#">
+                            <div class="wrap-card">
+                                <img src="./images/accommodation/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="image des hébergements populaires">
+                                <div class="card-info">
+                                    <div class="card-description">
+                                        <h3 class="medium-text card-title">Hôtel Tout bleu et Blanc</h3>
+                                        <p class="plain-text card-nightInfo">Nuit à partir de <em>68€</em></p>
+                                    </div>
+                                    <div class="card-score">
+                                        <i class="fas fa-star full-star"></i><i class="fas fa-star full-star"></i>
+                                        <i class="fas fa-star full-star"></i><i class="fas fa-star full-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </section>
         </div>

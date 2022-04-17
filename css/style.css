@@ -29,6 +29,10 @@ input[type="search"] {
     font-size: 28px;
     color: #000;
 }
+h1{
+    font-size: 28px;
+    font-weight: 900;
+}
 .link{
     text-decoration: none;
     color: #000;
@@ -51,7 +55,7 @@ header{
     height: auto;
     padding: 60px 0 0 15px;
 }
-    /*création du menu **********/
+/* création du menu **********/
 #menu{
     display: flex;
     align-items: flex-start;
@@ -76,14 +80,12 @@ header{
     color: #0065FC;
     border-color: #0065FC;
 }
-/*  format du titre **********/
+/* format du titre **********/
 #title{
     margin-top: 48px;
 }
 h1{
     margin-bottom: 10px;
-    font-size: 28px;
-    font-weight: 900;
 }
 
 /********** corps de page, zone principale ********************/
@@ -96,7 +98,7 @@ form{
     max-width: 554px;
     height: 70px;
     position: relative;
-    margin-bottom: 38px;
+    margin-bottom: 28px;
 }
 label{
     width: 70px;
@@ -155,6 +157,7 @@ label{
 }
 .button-filter{
     display: flex;
+    margin-top: 10px;
     border-radius: 34px;
     border-color: #d9d9d9;
 }
@@ -207,11 +210,9 @@ label{
     line-height: 27px;
     flex-shrink: 0;
 }
-/** card pour les hébergements par localité **********/
+/** structure de base de la card hébergement **********/
 .card{
-    flex: 1 0 30.6667%;
     padding: 0.6%;
-    margin: 2.8% 0 1.2%;
     border-radius: 20px;
     background-color: #fff;
     box-shadow: 5px 5px 7px #d9d9d9;
@@ -220,21 +221,21 @@ label{
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: stretch;
 }
-.card img{
-    height: 150px;
+.wrap-card img{
     width: 100%;
+    height: 152px;
     object-fit: cover;
     border-radius: 20px 20px 0 0;
 }
 .card-info{
-    margin-top: 3.5%;
-    padding: 0.7% 4% 0;
     flex: 1;
+    padding: 4.2% 4.7% 2%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+}
+.card-description{
+    flex: 1;
 }
 .card-title{
     margin-bottom: 2.2%;
@@ -249,66 +250,89 @@ label{
 .card-score{
     display: flex;
     color: #F2F2F2;
-    padding-bottom: 2%;
 }
 .full-star{
     color: #0065FC;
 }
-/*  Adaptation de la card pour la version hébergements populaires **********/
-#gallery-popular .card{
-    max-width: 100%;
-    margin: 8.2% 0 9.5%;
-    padding: 1%;
-}
-#gallery-popular .wrap-card{
-    flex-direction: row;
-}
-#gallery-popular img{
-    min-height: 180px;
-    width: 38%;
-    border-radius: 20px 0 0 20px;
-}
-#gallery-popular .card-info{
-    padding: 0 2% 2% 6%;
-    flex: 1;
-}
-#gallery-popular .card-nightInfo{
-    padding-top: 1.5%;
-}
-/** container des galleries hébergements **********
-/** par localité et les pluspopulaires ************/
-#wrap-galleries{
+/***********************************************************/
+/** sections des hébergements locaux et populaires         */
+/** containers des cards hébergements locaux et populaires */
+/** intégration des cards                                  */
+/***********************************************************/
+/* container flex des sections hébergements locaux et hébergements populaires **********/
+#wrap-housing{
     display: flex;
 }
-/*  gallerie des hébergements par localité **********/
-#gallery-location{
-    flex-basis: 65.5%;
+/*  section des hébergements locaux **********/
+#local-housing{
+    width: 65.5%;
     margin-right: 2.8%;
-    padding: 3% 3% 0 2.7%;
+    padding: 3% 3% 2.6% 2.7%;
     background-color: #F2F2F2;
     border-radius: 24px;
 }
-#gallery-location > a{
+#local-housing > h2{
+    margin-bottom: 2.8%;
+}
+#local-housing > a{
     margin-left: 0.8%;
 }
-#wrap-galleryLocation{
+/* container flex des cards hébergements locaux **********/
+#wrap-localHousing{
     height: auto;
     display: flex;
     justify-content: stretch;
     flex-wrap: wrap;
-    column-gap: 4%; /* TODO voir à remplacer par une marge à gauche et enlever la première de chaque rang */
-    margin-bottom: 4.5%;
+    column-gap: 3.8%; /* TODO voir à remplacer par une marge à gauche et enlever la première de chaque rang */
+    row-gap: 41px;
+    margin-bottom: 5.4%;
 }
-/* gallerie des hébergements les plus populaires **********/
-#gallery-popular{
+/* Intégration des cards hébergements locaux **********/
+#wrap-localHousing .card{
+    width: 30.8%;
+}
+/** surcharge de la card de base pour les hébergements populaires **********/
+#wrap-popularHousing .wrap-card{
+    flex-direction: row;
+    align-items: stretch;
+}
+#wrap-popularHousing .card img{
+    width: 38%;
+    height: 175px;
+    max-height: auto;
+    border-radius: 20px 0 0 20px;
+}
+#wrap-popularHousing .card-info{
+    padding: 3% 2% 2% 6%;
     flex: 1;
-    padding: 3% 3.2% 0 3%;
+}
+#wrap-popularHousing .card-title{
+    margin-bottom: 4%;
+}
+#wrap-popularHousing .card-nightInfo{
+    margin-bottom: 21.8%;
+}
+/* section des hébergements les plus populaires **********/
+#popular-housing{
+    flex: 1;
+    padding: 3% 3.2% 2.6% 3%;
     background-color: #F2F2F2;
     border-radius: 24px;
 }
-#gallery-popularTitle{
+#title-popularHousing{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 8.2%;
+}
+/* container flex des cards hébergements populaires **********/
+#wrap-popularHousing{
+    display: flex;
+    flex-direction: column;
+    row-gap: 51px;
+}
+/*  intégration de la card dans le container des hébergements populaires **********/
+#wrap-popularHousing .card{
+    padding: 1%;
 }
 
 /********** gestion adaptative des écrans ********************/
@@ -331,108 +355,26 @@ label{
     .extra-text{
         font-size: 24px;
     }
-    main{
-        margin: 0 40px;
-    }
-    /* .move-filter{
-        order: 1;
-    } */
-    .card{
-        flex: 1 0 48%;
-    }
-    #gallery-location{
-        flex-basis: 58.32%;
-    }
-/*  adaptation des filtres */
-    #filters{
-        margin-bottom: 74px;
-    }
-    #wrap-filters > p{
-        padding: 0;
-    }
-    .button-filter{
-        margin-right: 5px;
-    }
-    .wrap-iconFilter{
-        width: 30px;
-        height: 60px;
-    }
-    .icon-filter{
-        width: 60px;
-        height: 60px;
-        line-height: 60px;
-        font-size: 22px;
-        border-radius: 50%;
-    }
-    .label-filter{
-        height: 60px;
-        padding: 18px 18px 0 44px;
-        border-radius : 0 30px 30px 0;
-        font-size: 18px;
-    }
-    #info-free{
-        margin-left: 20px;
-    }
-}
-
-/** pour écran de smartphone **********/
-@media screen and (max-width: 768px) {
-
-    /*  header **********/
-    header{
-        padding:0;
-        margin: 0 0 40px;
-    }
-    #top-header{
-        flex-direction: column;
-        align-items: center;
-    }
-    #logo{
-        width: 125px;
-        padding: 23px 0 0 20px;
-    }
-/*  adaptation du menu **********/
-    #menu{
-        align-self: stretch;
-        align-items: center;
-        margin-bottom: 7px;
-    }
-    #menu ul{
-        flex: 1;
-        justify-content: stretch;
-    }
-    .menu-item{
-        flex: 1;
-    }
-    .menu-item a{
-        width: 100%;
-        border-bottom: solid 3px #F2F2F2;
-        padding: 29px 0 15px;
-        text-align: center;
-    }
-    .menu-item a:hover{
-        border-top: none;
-        border-color: #0065FC;
-    }
-/*  adaptation du titre **********/
-    #title{
-        width: 85%;
-        margin: 30px 0 0 24px;
-    }
     h1{
         font-size: 24px;
         font-weight: 700;
-        margin: 0 0 15px;
     }
-/*  corps de page, zone pincipale **********/
+    .menu-item a{
+        padding: 40px 30px 0;
+        border-top: 4px solid #fff;
+    }
+    header{
+        margin: 0 50px 25px;
+    }
+/* corps de page, zone pincipale **********/
     main{
         margin: 0;
     }
-/*  barre de recherche ***********/
+/* barre de recherche **********/
     form{
-        width: auto;
+        width: 400px;
         height: 56px;
-        margin: 0 32px 37px 24px;
+        margin: 0 auto 37px 50px;
     }
     label{
         height: 56px;
@@ -460,21 +402,164 @@ label{
         background-color: #0065FC;
         color: #fff;
     }
-/*  adaptation des filtres */
+/* adaptation des filtres **********/
+    #filters{
+        margin: 0 100px 60px 18px;
+    }
     #wrap-filters{
-        flex-direction: column;
-        margin: 0 0 27px 8px;
+        margin-bottom: 35px;
     }
     #wrap-filters > p{
-        margin-bottom: 14px;
-        padding-left: 16px;
+        margin: 0 20px 0 0;
+        padding: 27px 0 0 30px;
     }
     #wrap-filtersButtons{
-        padding-left: 14px;
-        column-gap: 0px;
+        column-gap: 5px;
+    }
+    #wrap-filtersButtons :nth-child(2){
+        order: 3;
+    }
+    #wrap-filtersButtons :nth-child(3){
+        order: 2;
+    }
+    #wrap-filtersButtons :nth-child(4){
+        order: 4;
     }
     .button-filter{
-        margin-bottom: 9px;
+        margin-right: 5px;
+    }
+    .wrap-iconFilter{
+        width: 30px;
+        height: 60px;
+    }
+    .icon-filter{
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 22px;
+        border-radius: 50%;
+    }
+    .label-filter{
+        height: 60px;
+        padding: 18px 18px 0 44px;
+        border-radius : 0 30px 30px 0;
+        font-size: 18px;
+    }
+    #info-free{
+        margin-left: 20px;
+    }
+
+/** container des cards hébergements par localité et populaires **********/
+/** et intégration des cards *********************************************/
+    #wrap-housing{
+        flex-direction: column;
+        align-items: stretch;
+    }
+/* container les plus populaires **********/
+    #popular-housing{
+        margin-bottom: 13%;
+        order: 1;
+        border-radius: initial;
+    }
+    #title-popularHousing{
+        width: 100%;
+    }
+    #wrap-popularHousing{
+        flex-direction: row;
+        column-gap: 2%;
+    }
+/* intégration des cards les plus populaires **********/
+    #wrap-popularHousing .card{
+        width: 32%;
+    }
+/* container hébergements localisés **********/
+    #local-housing{
+        width: 100%;
+        margin: 0;
+        order: 2;
+        border-radius: initial;
+    }
+    #wrap-localHousing{
+        column-gap: 2%;
+    }
+/* intégration des cards par loclité **********/
+    #wrap-localHousing .card{
+        width: 48%;
+    }
+}
+/** pour écran de smartphone **********/
+@media screen and (max-width: 768px) {
+
+/* header **********/
+    header{
+        padding:0;
+        margin: 0 0 40px;
+    }
+    #top-header{
+        flex-direction: column;
+        align-items: center;
+    }
+    #logo{
+        width: 125px;
+        padding: 23px 0 0 20px;
+    }
+/* adaptation du menu **********/
+    #menu{
+        align-self: stretch;
+        align-items: center;
+        margin-bottom: 7px;
+    }
+    #menu ul{
+        flex: 1;
+        justify-content: stretch;
+    }
+    .menu-item{
+        flex: 1;
+    }
+    .menu-item a{
+        width: 100%;
+        border-bottom: solid 3px #F2F2F2;
+        padding: 29px 0 15px;
+        text-align: center;
+    }
+    .menu-item a:hover{
+        border-top: none;
+        border-color: #0065FC;
+    }
+/* adaptation du titre **********/
+    #title{
+        width: 85%;
+        margin: 30px 0 0 24px;
+    }
+    h1{
+        margin: 0 0 15px;
+    }
+/* barre de recherche ***********/
+    form{
+        width: auto;
+        margin: 0 32px 37px 24px;
+    }
+/* adaptation des filtres **********/
+    #filters{
+        margin: 0 0 40px 0;
+    }
+    #wrap-filters{
+        flex-direction: column;
+        margin: 0 0 20px 8px;
+    }
+    #wrap-filters > p{
+        margin: 0 40px 14px 0;
+        padding: 0 0 0 16px;
+    }
+    #wrap-filtersButtons{
+        padding-left: 10px;
+        column-gap: 5px;
+    }
+    #wrap-filtersButtons :nth-child(2){
+        order: 2;
+    }
+    .button-filter{
+        margin: 0 0 11px;
     }
     #info-free{
         margin-left: 20px;
@@ -482,57 +567,66 @@ label{
     }
     .icon-info{
         padding-top: 0px;
-        margin-right: 10px;
+        margin-right: 11px;
     }
-/*  sortie des galeries des hébergements dans un flux vertical */
-    .card{
-        max-width: 100%;
-        margin: 3.5% 0 1.5%;
+    #info-free > p{
+        padding-top: 5px;
     }
-    .card img{
-        max-height: 130px;
-    }
-    .card-info{
+/* adaptation des cards par localité pour une largeur de 100% **********/
+    /* .card-info{
         margin-top: 2%;
-    }
-    .card-title{
+    } */
+    /* .card-title{
         margin-bottom: 0.8%;
     }
     .card-nightInfo{
         margin-bottom: 1.5%;
+    } */
+/* cartes de la gallerie des plus populaires pour une largeur de 100% **********/
+    #wrap-popularHousing .card img{
+        /* align-self: stretch; */
+        width: 39%;
+        height: 149px;
     }
-    #gallery-popular .card{
-        margin: 0 0 2.5%;
+/* sortie des galeries des hébergements en flux vertical **********/
+    #popular-housing{
+        margin-bottom: 13%;
+        padding: 10% 7% 0 6%;
     }
-    #gallery-popularTitle{
+    #title-popularHousing{
         margin-bottom: 9%;
     }
-    #gallery-popular img{
-        min-height: 155px;
-    }
-    #wrap-galleries{
+    #wrap-popularHousing{
+        /* width: 100%; */
+        /* display: initial; */
         flex-direction: column;
-    }
-    #gallery-popular{
-        width: 100%;
-        margin-bottom: 13%;
-        padding: 3% 6% 0;
+        /* align-items: stretch; */
+        row-gap: 15px;
+        /* margin-bottom: 13%; */
         order: 1;
-        border-radius: initial;
-    }    
-    #gallery-location{
+        /* border-radius: initial; */
+    }
+    #wrap-popularHousing .card{
+        width: 100%;
+        /* margin: 0 0 2.5%; */
+    }
+    #local-housing{
         margin-right: 2%;
         padding: 3% 6% 0;
         order: 2;
         border-radius: initial;
         background-color: initial;
     }
-    #wrap-galleryLocation{
+    #wrap-localHousing{
         flex-direction: column;
         flex-wrap: nowrap;
-        margin: 3.8% 0 7.5%;
+        /* margin: 3.8% 0 7.5%; */
     }
-    #gallery-location > a{
+    #local-housing > a{
         margin: 0;
+    }
+    #local-housing .card{
+        width: 100%;
+        /* margin: 3.5% 0 1.5%; */
     }
 }
