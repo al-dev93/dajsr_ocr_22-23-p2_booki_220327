@@ -41,8 +41,9 @@ body{
     font-family: 'Raleway', sans-serif;
     color: #000;
 }
-
-/********** création du header ********************/
+/********************/
+/** header          */
+/********************/
 header{
     margin: 0 75px 25px;
 }
@@ -55,7 +56,7 @@ header{
     height: auto;
     padding: 60px 0 0 15px;
 }
-/* création du menu **********/
+/* barre de menu **********/
 #menu{
     display: flex;
     align-items: flex-start;
@@ -80,19 +81,20 @@ header{
     color: #0065FC;
     border-color: #0065FC;
 }
-/* format du titre **********/
+/* placement du titre **********/
 #title{
     margin-top: 48px;
 }
 h1{
     margin-bottom: 10px;
 }
-
-/********** corps de page, zone principale ********************/
+/*********************************/
+/** corps de page, main          */
+/*********************************/
 main{
-    margin: 0 70px;
+    margin: 0 66px;
 }
-/** création de la barre de recherche **********/
+/** barre de recherche **********/
     /* TODO revoir la conception de la barre de recherche */
 form{
     max-width: 554px;
@@ -120,7 +122,6 @@ label{
     border: none;
     border-top: solid 2px #F2F2F2;
     border-bottom: solid 2px #F2F2F2;
-    border-color: #000; /**************! Pour test, à enlever *********************/
 }
 #large-searchButton{
     width: 177px;
@@ -136,7 +137,7 @@ label{
 #small-searchButton{
     display: none;
 }
-/** création des filtres **********/
+/** filtres **********/
 #filters{
     margin-bottom: 50px;
 }
@@ -149,7 +150,6 @@ label{
     margin: 0 40px 0 0;
     padding: 22px 0 0 10px;
 }
-/*  TODO  prévoir l'effet de survol sur les filtres */
 #wrap-filtersButtons{
     display: flex;
     column-gap: 27px;
@@ -163,7 +163,7 @@ label{
 }
 .button-filter:hover{
     border-color: #DEEBFF;
-    background-color: #F2F2F2;
+    background-color: hsla(0, 0%, 95%, 0.70);
     cursor: pointer;
 }
 .wrap-iconFilter{
@@ -256,14 +256,15 @@ label{
 }
 /***********************************************************/
 /** sections des hébergements locaux et populaires         */
-/** containers des cards hébergements locaux et populaires */
+/** conteneurs des cards hébergements locaux et populaires */
 /** intégration des cards                                  */
 /***********************************************************/
-/* container flex des sections hébergements locaux et hébergements populaires **********/
+/* conteneur flex des sections hébergements locaux et hébergements populaires **********/
 #wrap-housing{
     display: flex;
+    margin-bottom: 80px;
 }
-/*  section des hébergements locaux **********/
+/* section des hébergements locaux **********/
 #local-housing{
     width: 65.5%;
     margin-right: 2.8%;
@@ -277,7 +278,7 @@ label{
 #local-housing > a{
     margin-left: 0.8%;
 }
-/* container flex des cards hébergements locaux **********/
+/* conteneur flex des cards hébergements locaux **********/
 #wrap-localHousing{
     height: auto;
     display: flex;
@@ -324,20 +325,86 @@ label{
     justify-content: space-between;
     margin-bottom: 8.2%;
 }
-/* container flex des cards hébergements populaires **********/
+/* conteneur flex des cards hébergements populaires **********/
 #wrap-popularHousing{
     display: flex;
     flex-direction: column;
     row-gap: 51px;
 }
-/*  intégration de la card dans le container des hébergements populaires **********/
+/*  intégration de la card dans le conteneur des hébergements populaires **********/
 #wrap-popularHousing .card{
     padding: 1%;
 }
-
-/********** gestion adaptative des écrans ********************/
-
-/** pour écran de tablette **********/
+/***********************************/
+/** section des activités **********/
+/***********************************/
+/* effacement du conteneur des activités pour smartphone **********/
+#wrap-columnActivities{
+    display: none;
+}
+#activities{
+    margin-bottom: 76px;
+}
+#activities h2{
+    margin-bottom: 30px;
+}
+/* conteneur flex des activités **********/
+#wrap-activities{
+    display: flex;
+    column-gap: 3.25%;
+}
+/* conteneur flex pour une activité **********/
+.wrap-activity{
+    width: 22.4%;
+    height: 590px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+/* alignement des conteneurs flex regroupant deux activités **********/
+.wrap-activity:nth-child(2n+0){
+    justify-content: space-between;
+}
+.wrap-activity:nth-child(2n+0) .wrap-activity{
+    width: 100%;
+}
+.wrap-activity img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex: auto;
+    border-radius: 30px 30px 0 0;
+}
+.location-activity{
+    font-weight: bolder;
+    background-color: #fff;
+    padding: 26px 23px 26px;
+    border-radius: 0 0 30px 30px;
+    box-shadow: 5px 5px 7px #d9d9d9;
+}
+/* conteneurs des activités pour les conteneurs doubles **********/ 
+.wrap-activity:nth-child(2) > .wrap-activity:nth-child(1){
+    height: 310px;
+}
+.wrap-activity:nth-child(2) .wrap-activity:nth-child(2){
+    height: 224px;
+}
+.wrap-activity:nth-child(4) .wrap-activity:nth-child(1){
+    height: 260px;
+}
+.wrap-activity:nth-child(4) .wrap-activity:nth-child(2){
+    height: 280px;
+}
+/********************/
+/** footer          */
+/********************/
+footer{
+    height: 300px;
+    background-color: #F2F2F2;
+}
+/*******************************************************/
+/** gestion adaptative des écrans de tablette          */
+/*******************************************************/
 @media screen and (max-width: 992px){
 /*  propriétés globales **********/
     .plain-text{
@@ -402,7 +469,7 @@ label{
         background-color: #0065FC;
         color: #fff;
     }
-/* adaptation des filtres **********/
+/* filtres de recherche **********/
     #filters{
         margin: 0 100px 60px 18px;
     }
@@ -448,31 +515,36 @@ label{
     #info-free{
         margin-left: 20px;
     }
-
-/** container des cards hébergements par localité et populaires **********/
-/** et intégration des cards *********************************************/
+/***********************************************************/
+/** sections des hébergements locaux et populaires         */
+/** conteneurs des cards hébergements locaux et populaires */
+/** intégration des cards                                  */
+/***********************************************************/
     #wrap-housing{
         flex-direction: column;
         align-items: stretch;
     }
-/* container les plus populaires **********/
+/* conteneur des hébergements les plus populaires **********/
     #popular-housing{
         margin-bottom: 13%;
         order: 1;
         border-radius: initial;
+        padding-bottom: 8%;
     }
     #title-popularHousing{
         width: 100%;
     }
     #wrap-popularHousing{
         flex-direction: row;
-        column-gap: 2%;
+        flex-wrap: wrap;
+        column-gap: 3%;
+        row-gap: 30px;
     }
 /* intégration des cards les plus populaires **********/
     #wrap-popularHousing .card{
-        width: 32%;
+        width: 48.5%;
     }
-/* container hébergements localisés **********/
+/* conteneur des hébergements locaux **********/
     #local-housing{
         width: 100%;
         margin: 0;
@@ -480,16 +552,36 @@ label{
         border-radius: initial;
     }
     #wrap-localHousing{
-        column-gap: 2%;
+        column-gap: initial;
+        row-gap: 30px;
+        justify-content: space-between;
     }
-/* intégration des cards par loclité **********/
+/* intégration des cards hébergements locaux **********/
     #wrap-localHousing .card{
         width: 48%;
     }
+/***********************************/
+/** section des activités          */
+/***********************************/
+/* effacement du conteneur des activités pour smartphone **********/
+    #wrap-columnActivities{
+        display: none;
+    }
+    #activities{
+        padding: 0 3% 0 2.7%;
+    }
+    #wrap-activities{
+        flex-wrap: wrap;
+        row-gap: 30px;
+    }
+    .wrap-activity{
+        width: 48.375%;
+    }
 }
-/** pour écran de smartphone **********/
+/*********************************************************/
+/** gestion adaptative des écrans de smartphone          */
+/*********************************************************/
 @media screen and (max-width: 768px) {
-
 /* header **********/
     header{
         padding:0;
@@ -572,61 +664,94 @@ label{
     #info-free > p{
         padding-top: 5px;
     }
-/* adaptation des cards par localité pour une largeur de 100% **********/
-    /* .card-info{
-        margin-top: 2%;
-    } */
-    /* .card-title{
-        margin-bottom: 0.8%;
+/***********************************************************/
+/** sections des hébergements locaux et populaires         */
+/** conteneurs des cards hébergements locaux et populaires */
+/** intégration des cards                                  */
+/***********************************************************/
+    #wrap-housing{
+        margin-bottom: 60px;
     }
-    .card-nightInfo{
-        margin-bottom: 1.5%;
-    } */
-/* cartes de la gallerie des plus populaires pour une largeur de 100% **********/
-    #wrap-popularHousing .card img{
-        /* align-self: stretch; */
-        width: 39%;
-        height: 149px;
-    }
-/* sortie des galeries des hébergements en flux vertical **********/
+/* section des hébergements populaires **********/
     #popular-housing{
-        margin-bottom: 13%;
-        padding: 10% 7% 0 6%;
+        margin-bottom: 7%;
+        padding: 10% 7% 10% 6%;
     }
     #title-popularHousing{
         margin-bottom: 9%;
     }
+/* conteneur des cards hébergements populaires **********/
     #wrap-popularHousing{
-        /* width: 100%; */
-        /* display: initial; */
         flex-direction: column;
-        /* align-items: stretch; */
         row-gap: 15px;
-        /* margin-bottom: 13%; */
         order: 1;
-        /* border-radius: initial; */
     }
+    #wrap-popularHousing .card img{
+        width: 39%;
+        height: 149px;
+    }
+/* intégration des cards hébergements populaires **********/
     #wrap-popularHousing .card{
         width: 100%;
-        /* margin: 0 0 2.5%; */
     }
+/* section des hébergements locaux **********/
     #local-housing{
         margin-right: 2%;
-        padding: 3% 6% 0;
+        padding: 3% 8% 0 6%;
         order: 2;
         border-radius: initial;
         background-color: initial;
     }
-    #wrap-localHousing{
-        flex-direction: column;
-        flex-wrap: nowrap;
-        /* margin: 3.8% 0 7.5%; */
+    #local-housing h2{
+        margin-bottom: 6%;
     }
     #local-housing > a{
         margin: 0;
     }
-    #local-housing .card{
+/* conteneur des cards hébergements locaux **********/
+    #wrap-localHousing{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        row-gap: 18px;
+        margin-bottom: 10%;
+    }
+    #wrap-localHousing .card img{
+        height: 129px;
+    }
+    #wrap-localHousing .card .card-info{
+        padding: 2.6% 3.2% 2%;
+    }
+    #wrap-localHousing .card h3{
+        margin: 0;
+    }
+/* intégration des cards hébergements locaux **********/
+    #wrap-localHousing .card{
         width: 100%;
-        /* margin: 3.5% 0 1.5%; */
+    }
+/***********************************/
+/** section des activités **********/
+/***********************************/
+/* Effacement du conteneur des activités pour tablette et desktop **********/
+    #wrap-activities{
+        display: none;
+    }
+    #activities{
+        padding: 0 6.8% 0 5%;
+    }
+/* coteneur flex des activités dans une colonne **********/
+    #wrap-columnActivities{
+        display: flex;
+        flex-direction: column;
+        row-gap: 26px;
+    }
+    #wrap-columnActivities .wrap-activity img{
+        height: 150px;
+    }
+    #wrap-columnActivities .wrap-activity{
+        width: 100%;
+        height: auto;
+    }
+    #wrap-columnActivities .wrap-activity .location-activity{
+        padding: 22px 23px 18px;
     }
 }
