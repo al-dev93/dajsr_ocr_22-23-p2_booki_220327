@@ -15,9 +15,11 @@
 </head>
 <body>
     <header>
+        <!-- container supérieur du header -->
         <div id="top-header">
+            <!-- logo -->
             <a href="#"><img id="logo" src="./images/logo/Booki.png" alt="logo booki"></a> <!-- TODO encadrer le logo dans un lien-->
-            <!-- menu de la page -->
+            <!-- barre de menu -->
             <nav id="menu">
                 <ul>
                     <li class="menu-item"><a class="plain-text link" href="#">Hébergements</a></li>
@@ -25,13 +27,13 @@
                 </ul>
             </nav>
         </div>
-        <!-- cadre du titre-->
+        <!-- container du titre-->
         <div id="title">
             <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
             <p class="plain-text">En plein centre ville ou en pleine nature</p>
         </div>
     </header>
-    <!--* partie centrale de la page -->
+    <!--* corps de page - main -->
     <main>
         <!-- barre de recherche -->
         <form method="post" action="#">
@@ -40,43 +42,53 @@
             <button id="large-searchButton" class="bold-text" type="submit">Rechercher</button>
             <button id="small-searchButton" type="submit"><i class="fas fa-search"></i></button>
         </form>
-        <!-- création des filtres -->
+        <!-- filtres de recherche -->
         <div id="filters">
+            <!-- container flex des filtres -->
             <div id="wrap-filters">
                 <p class="bold-text">Filtres</p>
+                <!-- container flex des boutons de filtrage -->
                 <div id="wrap-filtersButtons">
+                    <!-- bouton de filtrage économique -->
                     <div class="button-filter">
                         <p class="wrap-iconFilter"><i class="fas fa-money-bill-wave icon-filter"></i></p>
                         <p class="label-filter bold-text">Économique</p>
                     </div>
+                    <!-- bouton de filtrage familial -->
                     <div class="button-filter ">
                         <p class="wrap-iconFilter"><i class="fas fa-child icon-filter"></i></p>
                         <p class="label-filter bold-text">Familial</p>
                     </div>
+                    <!-- bouton de filtrage romantique -->
                     <div class="button-filter">
                         <p class="wrap-iconFilter"><i class="fas fa-heart icon-filter"></i></p>
                         <p class="label-filter bold-text">Romantique</p>
                     </div>
+                    <!-- bouton de filtrage animaux -->
                     <div class="button-filter">
                         <p class="wrap-iconFilter"><i class="fas fa-dog icon-filter"></i></p>
                         <p class="label-filter bold-text">Animaux autorisés</p>
                     </div>
                 </div>
             </div>
+            <!-- information sur la disponibilité -->
             <div id="info-free">
                 <i class="fas fa-info icon-info"></i>
                 <p class="plain-text"> Plus de 500 logements sont disponibles dans cette ville</p>
             </div>
         </div>
+        <!-- conteneur flex des sections hébergements locaux et hébergements populaires -->
         <div id="wrap-housing">
-            <!-- Gallerie des hébergements par localité -->
+            <!-- section des hébergements locaux -->
             <section id="local-housing">
                 <h2 class="extra-text">Hébergements à Marseille</h2>
+                <!-- conteneur flex des cards hébergements locaux -->
                 <div id="wrap-localHousing">
+                    <!-- card de base pour hébergement local -->
                     <div class="card">
                         <a class="link" href="#">
                             <div class="wrap-card">
-                                <img src="./images/accommodation/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="image des hébergements">
+                                <img src="./images/accommodation/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="image hébergement local">
                                 <div class="card-info">
                                     <div class="card-description">
                                         <h3 class="medium-text card-title">Auberge La Cannebière</h3>
@@ -91,10 +103,11 @@
                             </div>
                         </a>
                     </div>
+                    <!-- card de base pour hébergement local -->
                     <div class="card">
                         <a class="link" href="#">
                             <div class="wrap-card">
-                                <img src="./images/accommodation/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="image des hébergements">
+                                <img src="./images/accommodation/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="image hébergement local">
                                 <div class="card-info">
                                     <div class="card-description">
                                         <h3 class="medium-text card-title">Hôtel du port</h3>
@@ -109,10 +122,11 @@
                             </div>
                         </a>
                     </div>
+                    <!-- card de base pour hébergement local -->
                     <div class="card">
                         <a class="link" href="#">
                             <div class="wrap-card">
-                                <img src="./images/accommodation/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="image des hébergements">
+                                <img src="./images/accommodation/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="image hébergement local">
                                 <div class="card-info">
                                     <div class="card-description">
                                         <h3 class="medium-text card-title">Hôtel Les mouettes</h3>
@@ -127,10 +141,11 @@
                             </div>
                         </a>
                     </div>
+                    <!-- card de base pour hébergement local -->
                     <div class="card">
                         <a class="link" href="#">
                             <div class="wrap-card">
-                                <img src="./images/accommodation/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="image des hébergements">
+                                <img src="./images/accommodation/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="image hébergement local">
                                 <div class="card-info">
                                     <div class="card-description">
                                         <h3 class="medium-text card-title">Hôtel de la mer</h3>
@@ -145,10 +160,11 @@
                             </div>
                         </a>
                     </div>
+                    <!-- card de base pour hébergement local -->
                     <div class="card">
                         <a class="link" href="#">
                             <div class="wrap-card">
-                                <img src="./images/accommodation/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="image des hébergements">
+                                <img src="./images/accommodation/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="image hébergement local">
                                 <div class="card-info">
                                     <div class="card-description">
                                         <h3 class="medium-text card-title">Auberge Le Panier</h3>
@@ -163,10 +179,11 @@
                             </div>
                         </a>
                     </div>
+                    <!-- card de base pour hébergement local -->
                     <div class="card">
                         <a class="link" href="#">
                             <div class="wrap-card">
-                                <img src="./images/accommodation/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="image des hébergements">
+                                <img src="./images/accommodation/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="image hébergement local">
                                 <div class="card-info">
                                     <div class="card-description">
                                         <h3 class="medium-text card-title">Hôtel chez Amina</h3>
@@ -184,17 +201,19 @@
                 </div>
                 <a class="link bold-text" href="#">Afficher plus</a>
             </section>
-            <!-- Gallerie des hébergements les plus populaires -->
+            <!-- section des hébergements les plus populaires -->
             <section id="popular-housing">
                 <div id="title-popularHousing">
                     <h2 class="extra-text">Les plus populaires</h2>
                     <i class="fas fa-chart-line extra-text"></i>
                 </div>
+                <!-- conteneur flex des cards hébergements les plus populaires -->
                 <div id="wrap-popularHousing">
+                    <!-- surcharge de la card de base pour hébergement populaire -->
                     <div class="card">
                         <a class="link" href="#">
                             <div class="wrap-card">
-                                <img src="./images/accommodation/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="image des hébergements populaires">
+                                <img src="./images/accommodation/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="image hébergement populaire">
                                 <div class="card-info">
                                     <div class="card-description">
                                         <h3 class="medium-text card-title">Hôtel le soleil du matin</h3>
@@ -209,10 +228,11 @@
                             </div>
                         </a>
                     </div>
+                    <!-- surcharge de la card de base pour hébergement populaire -->
                     <div class="card">
                         <a class="link" href="#">
                             <div class="wrap-card">
-                                <img src="./images/accommodation/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="image des hébergements populaires">
+                                <img src="./images/accommodation/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="image hébergement populaire">
                                 <div class="card-info">
                                     <div class="card-description">
                                         <h3 class="medium-text card-title">Au coeur de l'eau Chambres d'hôtes</h3>
@@ -227,10 +247,11 @@
                             </div>
                         </a>
                     </div>
+                    <!-- surcharge de la card de base pour hébergement populaire -->
                     <div class="card">
                         <a class="link" href="#">
                             <div class="wrap-card">
-                                <img src="./images/accommodation/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="image des hébergements populaires">
+                                <img src="./images/accommodation/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="image hébergement populaire">
                                 <div class="card-info">
                                     <div class="card-description">
                                         <h3 class="medium-text card-title">Hôtel Tout bleu et Blanc</h3>
@@ -248,6 +269,67 @@
                 </div>
             </section>
         </div>
+        <!-- section activités -->
+        <section id="activities">
+            <h2 class="extra-text">Activités à Marseille</h2>
+            <div id="wrap-activities">
+                <div class="wrap-activity">
+                    <img src="./images/activities/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="activité locale">
+                    <p class="location-activity medium-text">Vieux Port</p>
+                </div>
+                <div class="wrap-activity">
+                    <div class="wrap-activity">
+                        <img src="./images/activities/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="activité locale">
+                        <p class="location-activity medium-text">Fort de Pomègues</p>
+                    </div>
+                    <div class="wrap-activity">
+                        <img src="./images/activities/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="activité locale">
+                        <p class="location-activity medium-text">Île du Frioul</p>
+                    </div>
+                </div>
+                <div class="wrap-activity">
+                    <img src="./images/activities/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="">
+                    <p class="location-activity medium-text">Parc National des Calanques</p>
+                </div>
+                <div class="wrap-activity">
+                    <div class="wrap-activity">
+                        <img src="./images/activities/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="activité locale">
+                        <p class="location-activity medium-text">Notre-Dame-de-la-Garde</p>
+                    </div>
+                    <div class="wrap-activity">
+                        <img src="./images/activities/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="activité locale">
+                        <p class="location-activity medium-text">Parc Longchamp</p>
+                    </div>
+                </div>
+            </div>
+            <!-- conteneur des activités pour affichage smartphone -->
+            <div id="wrap-columnActivities">
+                <div class="wrap-activity">
+                    <img src="./images/activities/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="activité locale">
+                    <p class="location-activity medium-text">Vieux Port</p>
+                </div>
+                <div class="wrap-activity">
+                    <img src="./images/activities/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="activité locale">
+                    <p class="location-activity medium-text">Fort de Pomègues</p>
+                </div>
+                <div class="wrap-activity">
+                    <img src="./images/activities/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="activité locale">
+                    <p class="location-activity medium-text">Île du Frioul</p>
+                </div>
+                <div class="wrap-activity">
+                    <img src="./images/activities/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="">
+                    <p class="location-activity medium-text">Parc National des Calanques</p>
+                </div>
+                <div class="wrap-activity">
+                    <img src="./images/activities/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="activité locale">
+                    <p class="location-activity medium-text">Notre-Dame-de-la-Garde</p>
+                </div>
+                <div class="wrap-activity">
+                    <img src="./images/activities/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="activité locale">
+                    <p class="location-activity medium-text">Parc Longchamp</p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
