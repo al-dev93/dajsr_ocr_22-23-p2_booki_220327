@@ -37,6 +37,11 @@ h1{
     text-decoration: none;
     color: #000;
 }
+.menu-list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
 body{
     font-family: 'Raleway', sans-serif;
     color: #000;
@@ -62,13 +67,10 @@ header{
     align-items: flex-start;
 }
 #menu ul{
-    margin: 0;
-    padding: 0;
     display: flex;
     align-items: flex-end;
 }
 .menu-item{
-    list-style: none;
     display: flex;
 }
 .menu-item a{
@@ -95,7 +97,6 @@ main{
     margin: 0 66px;
 }
 /** barre de recherche **********/
-    /* TODO revoir la conception de la barre de recherche */
 form{
     max-width: 554px;
     height: 70px;
@@ -297,15 +298,16 @@ label{
     flex-direction: row;
     align-items: stretch;
 }
-#wrap-popularHousing .card img{
+#wrap-popularHousing .wrap-card img{
     width: 38%;
-    height: 175px;
-    max-height: auto;
+    /* height: 175px; */
+    height: auto;
+    max-height: 175px;
     border-radius: 20px 0 0 20px;
 }
 #wrap-popularHousing .card-info{
     padding: 3% 2% 2% 6%;
-    flex: 1;
+    /* flex: 1; */
 }
 #wrap-popularHousing .card-title{
     margin-bottom: 4%;
@@ -338,10 +340,6 @@ label{
 /***********************************/
 /** section des activités **********/
 /***********************************/
-/* effacement du conteneur des activités pour smartphone **********/
-#wrap-columnActivities{
-    display: none;
-}
 #activities{
     margin-bottom: 76px;
 }
@@ -350,29 +348,28 @@ label{
 }
 /* conteneur flex des activités **********/
 #wrap-activities{
+    height: 590px;
     display: flex;
     column-gap: 3.25%;
+    align-items: stretch;
 }
 /* conteneur flex pour une activité **********/
 .wrap-activity{
     width: 22.4%;
-    height: 590px;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
 }
 /* alignement des conteneurs flex regroupant deux activités **********/
-.wrap-activity:nth-child(2n+0){
-    justify-content: space-between;
+#wrap-activities > .wrap-activity:nth-child(2n+0){
+    justify-content: space-between ;
 }
-.wrap-activity:nth-child(2n+0) .wrap-activity{
+#wrap-activities > .wrap-activity:nth-child(2n+0) .wrap-activity{
     width: 100%;
 }
 .wrap-activity img{
     width: 100%;
-    height: 100%;
+    height: 513px;
     object-fit: cover;
-    flex: auto;
     border-radius: 30px 30px 0 0;
 }
 .location-activity{
@@ -383,24 +380,39 @@ label{
     box-shadow: 5px 5px 7px #d9d9d9;
 }
 /* conteneurs des activités pour les conteneurs doubles **********/ 
-.wrap-activity:nth-child(2) > .wrap-activity:nth-child(1){
-    height: 310px;
+#wrap-activities .wrap-activity:nth-child(2) .wrap-activity:nth-child(1) img{
+    height: 235px;
 }
-.wrap-activity:nth-child(2) .wrap-activity:nth-child(2){
-    height: 224px;
+#wrap-activities .wrap-activity:nth-child(2) .wrap-activity:nth-child(2) img{
+    height: 147px;
 }
-.wrap-activity:nth-child(4) .wrap-activity:nth-child(1){
-    height: 260px;
+#wrap-activities .wrap-activity:nth-child(4) .wrap-activity:nth-child(1) img{
+    height: 183px;
 }
-.wrap-activity:nth-child(4) .wrap-activity:nth-child(2){
-    height: 280px;
+#wrap-activities .wrap-activity:nth-child(4) .wrap-activity:nth-child(2) img{
+    height: 203px;
 }
 /********************/
 /** footer          */
 /********************/
 footer{
-    height: 300px;
     background-color: #F2F2F2;
+}
+#menu-footer{
+    padding: 57px 66px 60px 67px;
+    display: flex;
+}
+#menu-footer > .menu-list > li{
+    margin-bottom: 21px;
+}
+#menu-footer > .menu-list{
+    padding-right: 313px;
+}
+#menu-footer > .menu-list:nth-child(2){
+    padding-right: 382px;
+}
+#menu-footer a{
+    line-height: 40px;
 }
 /*******************************************************/
 /** gestion adaptative des écrans de tablette          */
@@ -526,7 +538,7 @@ footer{
     }
 /* conteneur des hébergements les plus populaires **********/
     #popular-housing{
-        margin-bottom: 13%;
+        margin-bottom: 80px;
         order: 1;
         border-radius: initial;
         padding-bottom: 8%;
@@ -563,19 +575,28 @@ footer{
 /***********************************/
 /** section des activités          */
 /***********************************/
-/* effacement du conteneur des activités pour smartphone **********/
-    #wrap-columnActivities{
-        display: none;
-    }
     #activities{
         padding: 0 3% 0 2.7%;
+        margin-bottom: 80px;
     }
     #wrap-activities{
+        height: auto;
         flex-wrap: wrap;
         row-gap: 30px;
     }
     .wrap-activity{
         width: 48.375%;
+    }
+/********************/
+/** footer          */
+/********************/
+    #menu-footer{
+        padding-right: 3%;
+        padding-left: 2.7%;
+        justify-content: space-between;
+    }
+    #menu-footer .menu-list:nth-child(1n){
+        padding-right: 0;
     }
 }
 /*********************************************************/
@@ -731,27 +752,41 @@ footer{
 /***********************************/
 /** section des activités **********/
 /***********************************/
-/* Effacement du conteneur des activités pour tablette et desktop **********/
-    #wrap-activities{
-        display: none;
-    }
     #activities{
         padding: 0 6.8% 0 5%;
+        margin-bottom: 54px;
     }
-/* coteneur flex des activités dans une colonne **********/
-    #wrap-columnActivities{
-        display: flex;
+    #wrap-activities .wrap-activity{
+        width: 100%;
+    }
+    #wrap-activities, #wrap-activities>.wrap-activity:nth-child(2n+0){
         flex-direction: column;
+        justify-content: flex-start;
         row-gap: 26px;
     }
-    #wrap-columnActivities .wrap-activity img{
+    .wrap-activity img, #wrap-activities .wrap-activity:nth-child(2n+0) .wrap-activity:nth-child(1n) img{
         height: 150px;
     }
-    #wrap-columnActivities .wrap-activity{
-        width: 100%;
-        height: auto;
-    }
-    #wrap-columnActivities .wrap-activity .location-activity{
+    .location-activity{
         padding: 22px 23px 18px;
+    }
+/********************/
+/** footer          */
+/********************/
+    #menu-footer{
+        flex-direction: column;
+        padding: 48px 50px 60px 31px;
+    }
+    #menu-footer>.menu-list:nth-child(1n){
+        margin: 0 0 37px;
+    }
+    #menu-footer>.menu-list:nth-child(2n){
+        margin: 0 0 50px;
+    }
+    #menu-footer>.menu-list>li{
+        margin-bottom: 12px;
+    }
+    #menu-footer .menu-list .menu-list li a{
+        line-height: 36px;
     }
 }
