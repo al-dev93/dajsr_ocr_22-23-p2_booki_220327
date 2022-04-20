@@ -163,8 +163,8 @@ label{
     border-color: #d9d9d9;
 }
 .button-filter:hover{
-    border-color: #DEEBFF;
-    background-color: hsla(0, 0%, 95%, 0.70);
+    border-color: rgba(0, 100, 250, 0.4);
+    background-color: rgba(242, 242, 242, 0.6);
     cursor: pointer;
 }
 .wrap-iconFilter{
@@ -218,19 +218,30 @@ label{
     background-color: #fff;
     box-shadow: 5px 5px 7px #d9d9d9;
 }
+.card:hover{
+    box-shadow: 5px 5px 15px rgba(0, 100, 250, 0.5);
+    background-color: rgba(224, 237, 255, 0.65);
+}
 .wrap-card{
     height: 100%;
     display: flex;
     flex-direction: column;
 }
-.wrap-card img{
+.wrap-imgCard{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+.wrap-imgCard img{
     width: 100%;
     height: 152px;
     object-fit: cover;
     border-radius: 20px 20px 0 0;
 }
 .card-info{
-    flex: 1;
+    min-height: 97.15px;
+    flex: auto;
     padding: 4.2% 4.7% 2%;
     display: flex;
     flex-direction: column;
@@ -240,9 +251,6 @@ label{
 }
 .card-title{
     margin-bottom: 2.2%;
-}
-.card-nightInfo{
-    margin-bottom: 2.5%;
 }
 .card-nightInfo em{
     font-style: normal;
@@ -295,25 +303,25 @@ label{
 }
 /** surcharge de la card de base pour les hébergements populaires **********/
 #wrap-popularHousing .wrap-card{
+    width: 100%;
     flex-direction: row;
     align-items: stretch;
 }
-#wrap-popularHousing .wrap-card img{
+#wrap-popularHousing .wrap-imgCard{
     width: 38%;
-    /* height: 175px; */
-    height: auto;
-    max-height: 175px;
+}
+#wrap-popularHousing .wrap-imgCard img{
+    width: 100%;
+    flex: auto;
     border-radius: 20px 0 0 20px;
 }
 #wrap-popularHousing .card-info{
+    flex: 1;
+    min-height: 175px;
     padding: 3% 2% 2% 6%;
-    /* flex: 1; */
 }
 #wrap-popularHousing .card-title{
     margin-bottom: 4%;
-}
-#wrap-popularHousing .card-nightInfo{
-    margin-bottom: 21.8%;
 }
 /* section des hébergements les plus populaires **********/
 #popular-housing{
@@ -397,19 +405,17 @@ label{
 /********************/
 footer{
     background-color: #F2F2F2;
+    padding: 57px 67px 60px;
 }
 #menu-footer{
-    padding: 57px 66px 60px 67px;
     display: flex;
+    justify-content: space-between;
+}
+#menu-footer > .menu-list{
+    width: 577px;
 }
 #menu-footer > .menu-list > li{
     margin-bottom: 21px;
-}
-#menu-footer > .menu-list{
-    padding-right: 313px;
-}
-#menu-footer > .menu-list:nth-child(2){
-    padding-right: 382px;
 }
 #menu-footer a{
     line-height: 40px;
@@ -590,13 +596,14 @@ footer{
 /********************/
 /** footer          */
 /********************/
-    #menu-footer{
-        padding-right: 3%;
-        padding-left: 2.7%;
-        justify-content: space-between;
+    footer{
+        padding: 3%;
     }
-    #menu-footer .menu-list:nth-child(1n){
-        padding-right: 0;
+    #menu-footer > .menu-list{
+        width: auto;
+    }
+    #menu-footer{
+        justify-content: space-between;
     }
 }
 /*********************************************************/
@@ -699,17 +706,19 @@ footer{
         padding: 10% 7% 10% 6%;
     }
     #title-popularHousing{
-        margin-bottom: 9%;
+        margin-bottom: 8.7%;
     }
 /* conteneur des cards hébergements populaires **********/
     #wrap-popularHousing{
         flex-direction: column;
-        row-gap: 15px;
+        row-gap: 14px;
         order: 1;
     }
-    #wrap-popularHousing .card img{
+    #wrap-popularHousing .wrap-imgCard{
         width: 39%;
-        height: 149px;
+    }
+    #wrap-popularHousing .card-info{
+        min-height: 149px;
     }
 /* intégration des cards hébergements populaires **********/
     #wrap-popularHousing .card{
@@ -733,14 +742,15 @@ footer{
     #wrap-localHousing{
         flex-direction: column;
         flex-wrap: nowrap;
-        row-gap: 18px;
+        row-gap: 16px;
         margin-bottom: 10%;
     }
-    #wrap-localHousing .card img{
+    #wrap-localHousing .wrap-imgCard img{
         height: 129px;
     }
-    #wrap-localHousing .card .card-info{
+    #wrap-localHousing .card-info{
         padding: 2.6% 3.2% 2%;
+        min-height: 87px;
     }
     #wrap-localHousing .card h3{
         margin: 0;
@@ -754,7 +764,7 @@ footer{
 /***********************************/
     #activities{
         padding: 0 6.8% 0 5%;
-        margin-bottom: 54px;
+        margin-bottom: 55px;
     }
     #wrap-activities .wrap-activity{
         width: 100%;
@@ -762,7 +772,7 @@ footer{
     #wrap-activities, #wrap-activities>.wrap-activity:nth-child(2n+0){
         flex-direction: column;
         justify-content: flex-start;
-        row-gap: 26px;
+        row-gap: 25px;
     }
     .wrap-activity img, #wrap-activities .wrap-activity:nth-child(2n+0) .wrap-activity:nth-child(1n) img{
         height: 150px;
@@ -775,7 +785,7 @@ footer{
 /********************/
     #menu-footer{
         flex-direction: column;
-        padding: 48px 50px 60px 31px;
+        padding: 37px 20px;
     }
     #menu-footer>.menu-list:nth-child(1n){
         margin: 0 0 37px;
