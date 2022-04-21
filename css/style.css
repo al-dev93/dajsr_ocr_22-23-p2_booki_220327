@@ -293,7 +293,7 @@ label{
     display: flex;
     justify-content: stretch;
     flex-wrap: wrap;
-    column-gap: 3.8%; /* TODO voir à remplacer par une marge à gauche et enlever la première de chaque rang */
+    column-gap: 3.8%;
     row-gap: 41px;
     margin-bottom: 5.4%;
 }
@@ -414,10 +414,11 @@ footer{
 #menu-footer > .menu-list{
     width: 577px;
 }
-#menu-footer > .menu-list > li{
-    margin-bottom: 21px;
+#menu-footer > .menu-list li .menu-list{
+    margin-top: 21px;
 }
 #menu-footer a{
+    font-weight: normal;
     line-height: 40px;
 }
 /*******************************************************/
@@ -486,6 +487,7 @@ footer{
         border-radius: 18px;
         background-color: #0065FC;
         color: #fff;
+        cursor: pointer;
     }
 /* filtres de recherche **********/
     #filters{
@@ -597,13 +599,10 @@ footer{
 /** footer          */
 /********************/
     footer{
-        padding: 3%;
+        padding: 5% 3%;
     }
     #menu-footer > .menu-list{
         width: auto;
-    }
-    #menu-footer{
-        justify-content: space-between;
     }
 }
 /*********************************************************/
@@ -783,18 +782,18 @@ footer{
 /********************/
 /** footer          */
 /********************/
+    footer{
+        padding-bottom: 7px;
+    }
     #menu-footer{
+        padding: 28px 20px 0px;
         flex-direction: column;
-        padding: 37px 20px;
     }
-    #menu-footer>.menu-list:nth-child(1n){
-        margin: 0 0 37px;
+    #menu-footer > .menu-list{
+        margin-bottom: 40px;
     }
-    #menu-footer>.menu-list:nth-child(2n){
-        margin: 0 0 50px;
-    }
-    #menu-footer>.menu-list>li{
-        margin-bottom: 12px;
+    #menu-footer > .menu-list li .menu-list{
+        margin-top: 13px;
     }
     #menu-footer .menu-list .menu-list li a{
         line-height: 36px;

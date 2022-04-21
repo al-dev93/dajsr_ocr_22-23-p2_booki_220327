@@ -8,9 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+    <!--! choix d'un autre cdn pour font awesome, celui conseillé ne fonctionne pas -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
-    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">-->
     <title>Booki</title>
 </head>
 <body>
@@ -18,7 +18,7 @@
         <!-- container supérieur du header -->
         <div id="top-header">
             <!-- logo -->
-            <a href="#"><img id="logo" src="./images/logo/Booki.png" alt="logo booki"></a> <!-- TODO encadrer le logo dans un lien-->
+            <a href="./index.html"><img id="logo" src="./images/logo/Booki.png" alt="logo booki"></a>
             <!-- barre de menu -->
             <nav id="menu">
                 <ul class="menu-list">
@@ -36,7 +36,7 @@
     <!--* corps de page - main -->
     <main>
         <!-- barre de recherche -->
-        <form method="post" action="#">
+        <form method="post" action="processing.php">
             <label class="fas fa-map-marker-alt medium-text" for="location"></label>
             <input type="search" id="location" class="bold-text" name="location" value="Marseille, France"/>
             <button id="large-searchButton" class="bold-text" type="submit">Rechercher</button>
@@ -89,7 +89,7 @@
                         <a class="link" href="#">
                             <div class="wrap-card">
                                 <div class="wrap-imgCard">
-                                    <img src="./images/accommodation/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="image hébergement local">
+                                    <img src="./images/accommodation/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="premier hébergement local">
                                 </div>
                                 <div class="card-info">
                                     <div class="card-description">
@@ -110,7 +110,7 @@
                         <a class="link" href="#">
                             <div class="wrap-card">
                                 <div class="wrap-imgCard">
-                                    <img src="./images/accommodation/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="image hébergement local">
+                                    <img src="./images/accommodation/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="deuxième hébergement local">
                                 </div>
                                 <div class="card-info">
                                     <div class="card-description">
@@ -131,7 +131,7 @@
                         <a class="link" href="#">
                             <div class="wrap-card">
                                 <div class="wrap-imgCard">
-                                    <img src="./images/accommodation/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="image hébergement local">
+                                    <img src="./images/accommodation/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="troisième hébergement local">
                                 </div>
                                 <div class="card-info">
                                     <div class="card-description">
@@ -152,7 +152,7 @@
                         <a class="link" href="#">
                             <div class="wrap-card">
                                 <div class="wrap-imgCard">
-                                    <img src="./images/accommodation/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="image hébergement local">
+                                    <img src="./images/accommodation/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="quatrième hébergement local">
                                 </div>
                                 <div class="card-info">
                                     <div class="card-description">
@@ -173,7 +173,7 @@
                         <a class="link" href="#">
                             <div class="wrap-card">
                                 <div class="wrap-imgCard">
-                                    <img src="./images/accommodation/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="image hébergement local">
+                                    <img src="./images/accommodation/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="cinquième image hébergement local">
                                 </div>
                                 <div class="card-info">
                                     <div class="card-description">
@@ -194,7 +194,7 @@
                         <a class="link" href="#">
                             <div class="wrap-card">
                                 <div class="wrap-imgCard">
-                                    <img src="./images/accommodation/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="image hébergement local">
+                                    <img src="./images/accommodation/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="sixième image hébergement local">
                                 </div>
                                 <div class="card-info">
                                     <div class="card-description">
@@ -226,7 +226,7 @@
                         <a class="link" href="#">
                             <div class="wrap-card">
                                 <div class="wrap-imgCard">
-                                    <img src="./images/accommodation/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="image hébergement populaire">
+                                    <img src="./images/accommodation/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="premier hébergement populaire">
                                 </div>
                                 <div class="card-info">
                                     <div class="card-description">
@@ -247,7 +247,7 @@
                         <a class="link" href="#">
                             <div class="wrap-card">
                                 <div class="wrap-imgCard">
-                                    <img src="./images/accommodation/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="image hébergement populaire">
+                                    <img src="./images/accommodation/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="deuxième hébergement populaire">
                                 </div>
                                 <div class="card-info">
                                     <div class="card-description">
@@ -268,7 +268,7 @@
                         <a class="link" href="#">
                             <div class="wrap-card">
                                 <div class="wrap-imgCard">
-                                    <img src="./images/accommodation/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="image hébergement populaire">
+                                    <img src="./images/accommodation/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="troisième hébergement populaire">
                                 </div>
                                 <div class="card-info">
                                     <div class="card-description">
@@ -292,60 +292,63 @@
             <h2 class="extra-text">Activités à Marseille</h2>
             <div id="wrap-activities">
                 <div class="wrap-activity">
-                    <img src="./images/activities/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="activité locale">
+                    <img src="./images/activities/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="première activité locale">
                     <p class="location-activity medium-text">Vieux Port</p>
                 </div>
                 <div class="wrap-activity">
                     <div class="wrap-activity">
-                        <img src="./images/activities/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="activité locale">
+                        <img src="./images/activities/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="deuxième activité locale">
                         <p class="location-activity medium-text">Fort de Pomègues</p>
                     </div>
                     <div class="wrap-activity">
-                        <img src="./images/activities/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="activité locale">
+                        <img src="./images/activities/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="troisième activité locale">
                         <p class="location-activity medium-text">Île du Frioul</p>
                     </div>
                 </div>
                 <div class="wrap-activity">
-                    <img src="./images/activities/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="">
+                    <img src="./images/activities/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="quatrième activité locale">
                     <p class="location-activity medium-text">Parc National des Calanques</p>
                 </div>
                 <div class="wrap-activity">
                     <div class="wrap-activity">
-                        <img src="./images/activities/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="activité locale">
+                        <img src="./images/activities/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="cinquième activité locale">
                         <p class="location-activity medium-text">Notre-Dame-de-la-Garde</p>
                     </div>
                     <div class="wrap-activity">
-                        <img src="./images/activities/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="activité locale">
+                        <img src="./images/activities/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="sixième activité locale">
                         <p class="location-activity medium-text">Parc Longchamp</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-
     <footer>
+        <!-- menu de navigation dans le footer -->
         <nav id="menu-footer">
             <ul class="menu-list">
-                <li class="bold-text">A propos</li>
-                <ul class="menu-list">
-                    <li><a class="link plain-text" href="#">Fonctionnement du site</a></li>
-                    <li><a class="link plain-text" href="#">Conditions générales de vente</a></li>
-                    <li><a class="link plain-text" href="#">Données et confidentialité</a></li>
-                </ul>
+                <li class="bold-text">A propos
+                    <ul class="menu-list plain-text">
+                        <li><a class="link" href="#">Fonctionnement du site</a></li>
+                        <li><a class="link" href="#">Conditions générales de vente</a></li>
+                        <li><a class="link" href="#">Données et confidentialité</a></li>
+                    </ul>
+                </li>
             </ul>
             <ul class="menu-list">
-                <li class="bold-text">Nos hébergements</li>
-                <ul class="menu-list">
-                    <li><a class="link plain-text" href="#">Charte qualité</a></li>
-                    <li><a class="link plain-text" href="#">Soumettre votre hôtel</a></li>
-                </ul>
+                <li class="bold-text">Nos hébergements
+                    <ul class="menu-list plain-text">
+                        <li><a class="link" href="#">Charte qualité</a></li>
+                        <li><a class="link" href="#">Soumettre votre hôtel</a></li>
+                    </ul>
+                </li>
             </ul>
             <ul class="menu-list">
-                <li class="bold-text">Assistance</li>
-                <ul class="menu-list">
-                    <li><a class="link plain-text" href="#">Centre d'aide</a></li>
-                    <li><a class="link plain-text" href="#">Nous contacter</a></li>
-                </ul>
+                <li class="bold-text">Assistance
+                    <ul class="menu-list plain-text">
+                        <li><a class="link" href="#">Centre d'aide</a></li>
+                        <li><a class="link" href="#">Nous contacter</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </footer>
